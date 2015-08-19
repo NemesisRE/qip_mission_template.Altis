@@ -9,17 +9,10 @@
 _unitsToModify = [_this, 0, [], [[]]] call BIS_fnc_param;
 _addToCurator = [_this, 1, true, [true]] call BIS_fnc_param;
 
-if (isNil "qipTPL_addUnitsToCuratorFunction") then
-{
-	qipTPL_addUnitsToCuratorFunction =
-	{
-		if (_this select 1) then
-		{
+if (isNil "qipTPL_addUnitsToCuratorFunction") then {
+	qipTPL_addUnitsToCuratorFunction = {
+		if (_this select 1) then {
 			{ _x addCuratorEditableObjects [(_this select 0), true]; } foreach allCurators;
-		}
-		else
-		{
-			{ _x removeCuratorEditableObjects [(_this select 0), true]; } foreach allCurators;
 		};
 	};
 	publicVariable "qipTPL_addUnitsToCuratorFunction";

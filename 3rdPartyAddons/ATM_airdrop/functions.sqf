@@ -6,8 +6,7 @@
 //                   visit us : atmarma.fr                 //
 /////////////////////////////////////////////////////////
 
-fnc_alt_onsliderchange =
-{
+fnc_alt_onsliderchange = {
 	private["_dialog","_text","_value"];
 	disableSerialization;
 
@@ -213,7 +212,7 @@ dokeyDown={
 } ;
 
 Getloadout={
-_gear = [];
+	_gear = [];
 	_headgear = headgear player;
 	_back_pack = backpack player;
 	_back_pack_items = getItemCargo (unitBackpack player);
@@ -221,8 +220,7 @@ _gear = [];
 	_back_pack_maga = getMagazineCargo (unitBackpack player);
 
 
-	_gear =
-	[
+	_gear =	[
 		_headgear,
 		_back_pack,
 		_back_pack_items,
@@ -230,7 +228,6 @@ _gear = [];
 		_back_pack_maga
 	];
 	_gear
-
 };
 
 Setloadout={
@@ -244,22 +241,18 @@ _unit = _this select 0;
 	if ((_gear select 0) != "") then {_unit addHeadgear (_gear select 0);};
 	if (count ((_gear select 3) select 0) > 0) then
 	{
-		for "_i" from 0 to (count ((_gear select 3) select 0) - 1) do
-		{
+		for "_i" from 0 to (count ((_gear select 3) select 0) - 1) do {
 			(unitBackpack _unit) addweaponCargoGlobal [((_gear select 3) select 0) select _i,((_gear select 3) select 1) select _i];
 		};
 	};
-	if (count ((_gear select 4) select 0) > 0) then
-	{
-		for "_i" from 0 to (count ((_gear select 4) select 0) - 1) do
-		{
+	if (count ((_gear select 4) select 0) > 0) then {
+		for "_i" from 0 to (count ((_gear select 4) select 0) - 1) do {
 			(unitBackpack _unit) addMagazineCargoGlobal [((_gear select 4) select 0) select _i,((_gear select 4) select 1) select _i];
 		};
 	};
 	if (count ((_gear select 2) select 0) > 0) then
 	{
-		for "_i" from 0 to (count ((_gear select 2) select 0) - 1) do
-		{
+		for "_i" from 0 to (count ((_gear select 2) select 0) - 1) do {
 			(unitBackpack _unit) addItemCargoGlobal [((_gear select 2) select 0) select _i,((_gear select 2) select 1) select _i];
 		};
 	};

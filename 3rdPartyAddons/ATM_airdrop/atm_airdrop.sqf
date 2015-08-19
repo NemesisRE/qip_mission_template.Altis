@@ -89,8 +89,7 @@ Cut_Rope = (FindDisplay 46) displayAddEventHandler ["keydown","_this call dokeyD
 
 while {(getPos _target select 2) > 2} do {
 	if(isTouchingGround _target and player == vehicle player) then{
-	}
-	else{
+	} else {
 	playSound "Vent";
 	playSound "Vent2";
 	sleep 5;

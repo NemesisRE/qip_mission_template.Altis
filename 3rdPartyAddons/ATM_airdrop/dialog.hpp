@@ -158,15 +158,9 @@ class ATM_AD_RscXSliderH
 	y = 0;
 	h = 0.029412;
 	w = 0.400000;
-	color[] = {
-			1, 1, 1, 0.7
-	};
-	colorActive[] = {
-			1, 1, 1, 1
-	};
-	colorDisabled[] = {
-			1, 1, 1, 0.500000
-	};
+	color[] = {1, 1, 1, 0.7};
+	colorActive[] = {1, 1, 1, 1};
+	colorDisabled[] = {1, 1, 1, 0.500000};
 	arrowEmpty = "\A3\ui_f\data\gui\cfg\slider\arrowEmpty_ca.paa";
 	arrowFull = "\A3\ui_f\data\gui\cfg\slider\arrowFull_ca.paa";
 	border = "\A3\ui_f\data\gui\cfg\slider\border_ca.paa";
