@@ -68,7 +68,9 @@ if (qipTPL_init && !isCurator) then {
 	hint parseText _postInitMsg;
 	sleep 5;
 	_unit enableSimulation true;
+	[_unit, currentWeapon _unit, currentMuzzle _unit] call ACE_SafeMode_fnc_lockSafety;
 };
 finishMissionInit;
 hintSilent "";
 missionInit = true;
+_unit playMove "AmovPercMstpSlowWrflDnon";

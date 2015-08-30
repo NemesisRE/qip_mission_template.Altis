@@ -1,19 +1,25 @@
 /*
-    Hier legt ihr das gear fest das ihr in der Spielerinit mit folgender Zeile auswählt:
-    null = [this, "Sani_Soldat_Fleck"] call compile preprocessFile "init/initLoadout.sqf"
+    Hier legt ihr das gear fest das ihr in der Name zeile mit der case anweisung ausfüllt + einem unterstrich mit einer
+	einzigartigen zahl für das jeweilige Gear.
+    sani-soldat-fleck_1
 
     Zu beachten ist das das exportierte Arsenal mit "this" ausgeben wird und ihr dieses aber durch "_unit" ersetzen müsst
 
-    Jedes Loadout hat seinen eignen Namen den Ihr frei wählen dürft dieser steht nach dem "case" befehl und in der initzeile
-    des Spielers, wie oben zu sehen.
-    
+    Jedes Loadout hat seinen eignen Namen den Ihr frei wählen dürft (alles klein und keine unterstriche) dieser steht nach
+	dem "case" befehl und in der Name Zeile (Name + _{1..n}) des Spielers, wie oben zu sehen.
+
 */
 
 _unit = _this select 0;
 _strLoadout = _this select 1;
 
 switch (_strLoadout) do {
-	case "Sani_Soldat_Fleck": {
+	case "sanitäter - soldat": {
+		removeAllWeapons _unit;
+		removeAllAssignedItems  _unit;
+		removebackpack _unit;
+		removeGoggles _unit;
+		removeHeadgear _unit;
         comment "Add containers";
         _unit forceAddUniform "BWA3_Uniform_idz_Fleck";
         _unit addItemToUniform "ACE_MapTools";
@@ -51,7 +57,12 @@ switch (_strLoadout) do {
         _unit linkItem "BWA3_ItemNaviPad";
         _unit linkItem "rhsusf_ANPVS_15";
     };
-    case "Sani_DM_Fleck": {
+    case "sanitäter - dm": {
+		removeAllWeapons _unit;
+		removeAllAssignedItems  _unit;
+		removebackpack _unit;
+		removeGoggles _unit;
+		removeHeadgear _unit;
         comment "Add containers";
         _unit forceAddUniform "BWA3_Uniform_idz_Fleck";
         _unit addItemToUniform "ACE_MapTools";
@@ -84,13 +95,7 @@ switch (_strLoadout) do {
         comment "Add items";
         _unit linkItem "ItemMap";
         _unit linkItem "ItemCompass";
-        _unit linkItem "tf_microdagr";
-        _unit linkItem "tf_anprc152_1";
         _unit linkItem "BWA3_ItemNaviPad";
         _unit linkItem "rhsusf_ANPVS_15";
-
-        comment "Set identity";
-        _unit setFace "WhiteHead_20";
-        _unit setSpeaker "ACE_NoVoice";
     };
 };

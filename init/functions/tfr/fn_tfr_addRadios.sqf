@@ -29,7 +29,7 @@ if(!f_radios_settings_tfr_disableRadios) then {
 	// Give out respective radios
 	_unit linkItem _radio2;
 
-	if (_unit == (leader (group _unit))) then {
+	if (_unit == (leader (group _unit)) && !tf_no_auto_long_range_radio) then {
 		_backpackItems = backpackItems player;
 		removeBackpack _unit;
 		_unit addBackpack _radio1;
