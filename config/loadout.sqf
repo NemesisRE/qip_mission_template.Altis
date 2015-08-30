@@ -1,12 +1,12 @@
 /*
-    Hier legt ihr das gear fest das ihr in der Name zeile mit der case anweisung ausfüllt + einem unterstrich mit einer
-	einzigartigen zahl für das jeweilige Gear.
-    sani-soldat-fleck_1
+    Hier legt ihr das gear fest das ihr in der Name zeile mit der case anweisung ausfüllt
+    "sanitäter" oder "sanitäter - dm"
 
     Zu beachten ist das das exportierte Arsenal mit "this" ausgeben wird und ihr dieses aber durch "_unit" ersetzen müsst
 
-    Jedes Loadout hat seinen eignen Namen den Ihr frei wählen dürft (alles klein und keine unterstriche) dieser steht nach
-	dem "case" befehl und in der Name Zeile (Name + _{1..n}) des Spielers, wie oben zu sehen.
+    Jedes Loadout hat seinen eignen Namen den Ihr frei wählen dürft (alles klein) dieser steht nach
+	dem "case" befehl und in der Beschreibungs Zeile (in der Beschreibung kann auch groß geschrieben werden) des Spielers,
+	wie oben zu sehen.
 
 */
 
