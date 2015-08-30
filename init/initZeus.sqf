@@ -18,6 +18,13 @@ private ["_curator","_curatorVehicle"];
 			_curator setCuratorCoef [_x,0];
 		} forEach ["place","edit","delete","destroy","group","synchronize"];
 
+		[] spawn {
+			waitUntil {(call TFAR_fnc_haveSWRadio)};
+			[(call TFAR_fnc_activeSwRadio), tf_freq_west] call TFAR_fnc_setSwSettings;
+			waitUntil {(call TFAR_fnc_haveLRRadio)};
+			[(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, tf_freq_west_lr] call TFAR_fnc_setLrSettings;
+		};
+
 	} forEach allCurators;
 
 	[] call qipTPL_fnc_coopZeus;
