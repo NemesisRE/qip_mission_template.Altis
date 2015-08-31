@@ -31,6 +31,11 @@ ADF_isHC 					= false;
 isCurator					= [player] call qipTPL_fnc_isCurator;
 if (isNil "ADF_HC_connected") then {ADF_HC_connected = false;}; // HC init
 
+if (!qipTPL_uavIntro && qipTPL_init && !isCurator) then {
+	_l = ["tLayer"] call BIS_fnc_rscLayer;
+	_l cutText ["", "BLACK IN", (qipTPL_missionInitTime + 5)];
+};
+
 player setVariable ["BIS_noCoreConversations",true]; // Disable AI chatter.
 enableSaving [false,false]; // Disables save when aborting.
 enableTeamSwitch false; // Disables team switch.
