@@ -5,12 +5,13 @@ Configure the mission timer in initConfig.sqf
 
 diag_log "Init - executing initPost.sqf"; // Reporting. Do NOT edit/remove
 
-private ["_unit","_unitName","_cnt","_TimerInput","_timer","_uavIntro","_initMsg","_postInitMsg"];
+private ["_unit","_unitName","_cnt","_timerInput","_timer","_halfTime","_uavIntro","_initMsg","_postInitMsg"];
 _unit = player;
 _unitName = name player;
 _cnt = 0;
-_TimerInput = qipTPL_missionInitTime; // Mission Init time counter. Min 30 secs. Add 1 sec per 2 players. 10 players = 35 secs.
-_timer = _TimerInput / 100;
+_timerInput = qipTPL_missionInitTime; // Mission Init time counter. Min 30 secs. Add 1 sec per 2 players. 10 players = 35 secs.
+_timer = _timerInput / 100;
+_cntStop = -1;
 
 if (isDedicated || ADF_isHC) exitWith {missionInit = true;};
 
@@ -38,13 +39,17 @@ if (qipTPL_init && !isCurator) then {
 			<t align='left' size='1.2' color='#F7D358'>Missions Initialsierung:</t><br/>
 			<t align='left' size='1.1' color='#CCA9A9' font='PuristaBold'>%1&#0037; abgeschlossen</t><br/><br/>
 			<t align='left' color='#FFFFFF'>Hallo %3,</t><br/>
-			<t align='left' color='#A1A4AD'>die Initialisierung dauert etwa %2 Sekunde. Währenddessen kannst du dich nicht bewegen oder andere Aktionen durführen, also keine Panik.</t><br/>
+			<t align='left' color='#A1A4AD'>die Initialisierung dauert etwa %2 Sekunden. Währenddessen kannst du dich nicht bewegen oder andere Aktionen durchführen, also keine Panik.</t><br/>
 			<br/>
 		", _cnt,_TimerInput,_unitName];
 
 		sleep _timer;
 		if (scriptDone _uavIntro) then {
 			hintSilent parseText _initMsg;
+			if (_cntStop == -1) then {
+				_cntStop = _cnt;
+				["<img size= '9' shadow='false' image='" + qipTPL_clanLogo + "'/><br/><br/><t size='.7' color='#FFFFFF'>Mission presented by " + qipTPL_clanName + "</t>",0,0,5,((100 - _cntStop) * _timer)] spawn BIS_fnc_dynamicText;
+			};
 		};
 	};
 
@@ -74,6 +79,7 @@ hintSilent "";
 missionInit = true;
 
 if (!isCurator) then {
+	if (!qipTPL_init) then {waitUntil {scriptDone qipTPL_initTPL;};};
 	_unit playMove "AmovPercMstpSlowWrflDnon";
 	[_unit, currentWeapon _unit, currentMuzzle _unit] call ACE_SafeMode_fnc_lockSafety;
 };
