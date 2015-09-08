@@ -24,12 +24,16 @@ mod_AIA	 		= isClass (configFile >> "CfgPatches" >> "AiA_Core"); // All in Arma 
 mod_Ares 		= isClass (configFile >> "CfgPatches" >> "Ares"); // Ares Zeus V1.39 B7
 mod_CSAT 		= isClass (configFile >> "CfgPatches" >> "TEC_CSAT"); // TEC CSAT V1.39 B7
 mod_RHS	 		= isClass (configFile >> "CfgPatches" >> "rhs_main"); // Red Hammer Studios V1.39 B7
+mod_ASRAI 		= isClass (configFile >> "CfgPatches" >> "asr_ai"); // Check if ASR AI is present
 
 // Init global mission vars
 missionInit 				= false;
 ADF_isHC 					= false;
 isCurator					= [player] call qipTPL_fnc_isCurator;
-if (isNil "ADF_HC_connected") then {ADF_HC_connected = false;}; // HC init
+
+if (isNil "ADF_HC_connected") then {
+	ADF_HC_connected = false;
+};
 
 if (!qipTPL_uavIntro && qipTPL_init && !isCurator) then {
 	_l = ["tLayer"] call BIS_fnc_rscLayer;
