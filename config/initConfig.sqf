@@ -6,6 +6,7 @@ qipTPL_clanName = "quies in proelium"; // What is the name of your community/cla
 qipTPL_clanTag = "[qip]"; // What is the tag of your community/clan. Used in Hints, intro's etc.
 qipTPL_clanLogo = "qip\Images\qip_logo.paa"; // Full path to the clan logo.
 qipTPL_clanFlag = "qip\Images\qip_flag.paa"; // Full path to the clan flag (dimensions 512 x 256, pref PAA format).
+qipTPL_coldWeather = false; // enables breathfog, probably more in the futur
 
 /********** Technical **********/
 _ADF_HC_init = ["HC"] call qipTPL_fnc_paramToBool; // Enable the Headless Client [true/false].
@@ -28,3 +29,5 @@ _ADF_CleanUp_abaTimer = 6000; // x seconds a vehicle must be unmanned to be dele
 
 /********** Additional Settings **********/
 #include "tfr_settings.sqf"
+#include "asr_ai3\asr_ai3_settings.sqf"
+#include "asr_ai3\asr_ai3_settings_ss.sqf"
