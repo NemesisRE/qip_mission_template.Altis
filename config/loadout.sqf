@@ -196,7 +196,9 @@ switch (_strLoadout) do {
 		_unit addItemToBackpack "ACE_bodyBag";
 		for "_i" from 1 to 20 do {_unit addItemToBackpack "Chemlight_red";};
 		for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
-		for "_i" from 1 to 15 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
+		for "_i" from 1 to 8 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
+		for "_i" from 1 to 6 do {_unit addItemToBackpack "UGL_FlareWhite_F";};
+		_unit addItemToBackpack "UGL_FlareGreen_F";
 		_unit addGoggles "TRYK_US_ESS_Glasses_WH";
 		_unit addWeapon "IP_arifle_MX_GL_White_F";
 		_unit addPrimaryWeaponItem "CUP_acc_Flashlight";
