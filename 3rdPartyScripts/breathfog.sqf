@@ -1,6 +1,8 @@
 // Thanks to tpw for the particle params!
+if (isDedicated) exitWith {};
+
 doobreath = {
-	private ["_pos", "_ps"];
+	private ["_pos", "_ps", "_nearGetBreath"];
 	sleep random 2;
 	_pos = _this selectionposition "neck";
 	while {_this distance player < 800 and alive _this and vehicle _this == _this and _pos select 2 != 0} do {
