@@ -53,7 +53,7 @@ Manual:			Call from init.sqf via:
 						</Package>
 					</Project>
 */
-
+if (isDedicated) exitWith {};
 waitUntil {!isNull player}; //to prevent MP / JIP issues
 
 NreEarplugsPath = "3rdPartyScripts\";

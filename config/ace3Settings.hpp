@@ -58,7 +58,7 @@ class ACE_Settings {
 	class ace_finger_indicatorColor {
 		value = [0.83,0.68,0.21,0.75];
 		typeName = "COLOR";
-		force = 0;
+		force = 1;
 	};
 	class ace_frag_Enabled {
 		value = 1;
@@ -527,12 +527,12 @@ class ACE_Settings {
 		force = 0;
 	};
 	class ace_respawn_SavePreDeathGear {
-		value = 0;
+		value = 1;
 		typeName = "BOOL";
 		force = 1;
 	};
 	class ace_respawn_RemoveDeadBodiesDisconnected {
-		value = 0;
+		value = 1;
 		typeName = "BOOL";
 		force = 1;
 	};

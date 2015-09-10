@@ -12,8 +12,6 @@ enableEnvironment false; // Perf saver - remove rabbits, snakes, etc
 
 ["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups; // Initializes the player/client side Dynamic Groups framework and registers the player group
 
-qipTPL_initZeus = execVM 'init\initZeus.sqf'; // qip Zeus init
-
 //WIP
 // player setVariable [ "VAcatch", [ "VAcatch", "onEachFrame", {
 // 	if ( !( isNil { _this getVariable "VAcatch" } ) && { !( isNull ( uiNamespace getVariable [ "BIS_fnc_arsenal_cam", objNull ] ) ) } ) then {
