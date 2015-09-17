@@ -1,4 +1,4 @@
-// ------ACE Settings 3.2.0 ------
+// ------ACE Settings 3.3.1 ------
 class ACE_Settings {
 	class ace_common_forceAllSettings {
 		value = 0;
@@ -56,9 +56,9 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_finger_indicatorColor {
-		value = [0.83,0.68,0.21,0.75];
+		value = [1,0.733582,0,0.498846];
 		typeName = "COLOR";
-		force = 1;
+		force = 0;
 	};
 	class ace_frag_Enabled {
 		value = 1;
@@ -216,6 +216,11 @@ class ACE_Settings {
 		typeName = "BOOL";
 		force = 1;
 	};
+	class ace_map_mapGlow {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
 	class ace_map_mapShake {
 		value = 1;
 		typeName = "BOOL";
@@ -297,7 +302,7 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_medical_AIDamageThreshold {
-		value = 1.5;
+		value = 1;
 		typeName = "SCALAR";
 		force = 1;
 	};
@@ -397,7 +402,7 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_medical_healHitPointAfterAdvBandage {
-		value = 0;
+		value = 1;
 		typeName = "BOOL";
 		force = 1;
 	};
@@ -424,6 +429,21 @@ class ACE_Settings {
 	class ace_medical_menuTypeStyle {
 		value = 1;
 		typeName = "SCALAR";
+		force = 0;
+	};
+	class ace_medical_menu_allow {
+		value = 1;
+		typeName = "SCALAR";
+		force = 0;
+	};
+	class ace_medical_menu_useMenu {
+		value = 1;
+		typeName = "SCALAR";
+		force = 0;
+	};
+	class ace_medical_menu_openAfterTreatment {
+		value = 1;
+		typeName = "BOOL";
 		force = 0;
 	};
 	class ace_microdagr_MapDataAvailable {
@@ -526,6 +546,56 @@ class ACE_Settings {
 		typeName = "BOOL";
 		force = 0;
 	};
+	class ace_repair_DisplayTextOnRepair {
+		value = 1;
+		typeName = "BOOL";
+		force = 0;
+	};
+	class ace_repair_engineerSetting_Repair {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_engineerSetting_Wheel {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_repairDamageThreshold {
+		value = 0.6;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_repairDamageThreshold_Engineer {
+		value = 0.4;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_consumeItem_ToolKit {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_fullRepairLocation {
+		value = 2;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_engineerSetting_fullRepair {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_addSpareParts {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_repair_wheelRepairRequiredItems {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
 	class ace_respawn_SavePreDeathGear {
 		value = 1;
 		typeName = "BOOL";
@@ -544,6 +614,26 @@ class ACE_Settings {
 	class ace_sitting_enable {
 		value = 1;
 		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_spectator_filterUnits {
+		value = 2;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_spectator_filterSides {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_spectator_restrictModes {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_spectator_restrictVisions {
+		value = 0;
+		typeName = "SCALAR";
 		force = 1;
 	};
 	class ace_switchunits_EnableSwitchUnits {
@@ -706,12 +796,27 @@ class ACE_Settings {
 		typeName = "SCALAR";
 		force = 1;
 	};
+	class ace_zeus_autoAddObjects {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
 	class ace_captives_allowHandcuffOwnSide {
 		value = 1;
 		typeName = "BOOL";
 		force = 1;
 	};
+	class ace_captives_requireSurrender {
+		value = 2;
+		typeName = "SCALAR";
+		force = 1;
+	};
 	class ace_captives_allowSurrender {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_cargo_enable {
 		value = 1;
 		typeName = "BOOL";
 		force = 1;
@@ -747,6 +852,11 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_hearing_DisableEarRinging {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_hearing_enabledForZeusUnits {
 		value = 1;
 		typeName = "BOOL";
 		force = 1;
