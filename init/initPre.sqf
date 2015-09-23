@@ -34,6 +34,7 @@ qipTPL_init 				= ["initTPL"] call qipTPL_fnc_paramToBool;
 qipTPL_uavIntro 			= ["uavIntro"] call qipTPL_fnc_paramToBool;
 ADF_HC_init 				= ["HC"] call qipTPL_fnc_paramToBool; // Enable the Headless Client [true/false].
 ADF_Log_ServerPerfEnable 		= ["ServerPerf"] call qipTPL_fnc_paramToBool; // Enable server performance logging in RPT. [true/false]
+ADF_CleanUp 				= ["Cleanup"] call qipTPL_fnc_paramToBool; // enable cleaning up of dead bodies (friendly, enemy, vehicles, etc.) [true/false].
 
 if (isNil "ADF_HC_connected") then {
 	ADF_HC_connected = false;
