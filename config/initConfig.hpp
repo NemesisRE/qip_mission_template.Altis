@@ -14,7 +14,6 @@ ADF_Caching_vehicleDistance_air = 1500; // aircraft caching distance default = 2
 ADF_Caching_vehicleDistance_sea = 2000; // boats caching distance default = 250 meters.
 
 /********** Cleanup **********/
-ADF_CleanUp = ["Cleanup"] call qipTPL_fnc_paramToBool; // enable cleaning up of dead bodies (friendly, enemy, vehicles, etc.) [true/false].
 ADF_CleanUp_viewDist = 500; // min distance in meter from a player unit to allow delete, if you dont care if player sees the delete, set it to 0.
 ADF_CleanUp_manTimer = 300; // x seconds until delete of dead man units.
 ADF_CleanUp_vehTimer = 600; // x seconds until delete of dead vehicles, for destroyed and heavy damaged vehicles.
