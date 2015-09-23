@@ -14,7 +14,6 @@ if (!isDedicated && (isNull player)) then {
 
 qipTPL_initBriefing = [] execVM 'config\briefing.sqf'; // Load Mission Briefing
 qipTPL_initCredits = [] execVM 'init\tplCredits.sqf';
-#include "config\initConfig.sqf"
 #include "init\initPre.sqf"
 
 // HC init. Init before caching. Is HC is active then caching is disabled
