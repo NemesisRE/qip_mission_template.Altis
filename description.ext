@@ -54,8 +54,7 @@ disableChannels[] = {0,1,2,3,4,5,6}; // Restrict chat channels where (0=Global),
 enableDebugConsole = 1;	// Enable the debug console where (0=disabled),(1=Admins Only),(2=Everyone) DO NOT SET AS 2!
 aiKills = 0; // 0 = Disable, 1 = Enable
 enableItemsDropping = 1; // 0 = Disable, 1 = Enable
-allowFunctionsLog = 0; // 0 = Disable, 1 = Enable
-#include "config\initConfig.hpp"
+allowFunctionsLog = 1; // 0 = Disable, 1 = Enable
 
 /**********  3rd Party includes  **********/
 #include "config\ace3Settings.hpp" // ACE 3 Settings
