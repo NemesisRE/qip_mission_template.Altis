@@ -16,7 +16,10 @@ private ["_curator","_curatorVehicle"];
 		_curator addCuratorPoints 1;
 		_curator setCuratorWaypointCost 0;
 		[_curator,"player",["Skill","UnitPos","Rank","Damage","Fuel","Lock","RespawnVehicle","RespawnPosition","Exec"]] call BIS_fnc_setCuratorAttributes;
-		_curatorVehicle setVariable ["ace_medical_allowDamage", false];
+		if (mod_ACE3) then {
+			_curatorVehicle setVariable ["ace_medical_allowDamage", false];
+		};
+		_curatorVehicle addEventHandler ["HandleDamage", {false}];
 
 		[_curator,[-1,-2,0,1,2,3,4,5,6,7]] call BIS_fnc_setCuratorVisionModes;
 

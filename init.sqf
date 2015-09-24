@@ -18,7 +18,7 @@ qipTPL_initCredits = [] execVM 'init\tplCredits.sqf';
 #include "init\initPre.sqf"
 
 // HC init. Init before caching. Is HC is active then caching is disabled
-if (_ADF_HC_init) then {
+if (ADF_HC_init) then {
 	_ADF_run_HC = execVM "init\ADF\ADF_HC.sqf";
 	waitUntil {scriptDone _ADF_run_HC}
 }; // Headless Client. Only executed when a HC is physically present (configured in server.cfg). See 'Core\ADF_HC.sqf' for more info.
@@ -26,11 +26,11 @@ if (_ADF_HC_init) then {
 /********** Server only Init **********/
 if (isServer) then  { //server init
 	#include "init\ADF\ADF_init_rpt.sqf"
-	if (_ADF_CleanUp) then {
-		[_ADF_CleanUp_viewDist,_ADF_CleanUp_manTimer,_ADF_CleanUp_vehTimer,_ADF_CleanUp_abaTimer] execVM "3rdPartyScripts\delete.sqf";
+	if (ADF_CleanUp) then {
+		[] execVM "3rdPartyScripts\delete.sqf";
 	}; // garbage collector.
-	if (_ADF_Caching && !ADF_HC_connected) then {
-		[_ADF_Caching_UnitDistance,-1,_ADF_Caching_Debug,_ADF_Caching_vehicleDistance_land,_ADF_Caching_vehicleDistance_air,_ADF_Caching_vehicleDistance_sea] execVM "3rdPartyAddons\zbe_cache\main.sqf";
+	if (ADF_Caching && !ADF_HC_connected) then {
+		[] execVM "3rdPartyAddons\zbe_cache\main.sqf";
 	}; // Configure in ADF_init_config.sqf
 };
 

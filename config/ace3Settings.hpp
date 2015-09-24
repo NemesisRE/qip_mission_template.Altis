@@ -852,7 +852,7 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_hearing_DisableEarRinging {
-		value = 1;
+		value = 0;
 		typeName = "BOOL";
 		force = 1;
 	};

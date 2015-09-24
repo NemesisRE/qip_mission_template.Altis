@@ -1,9 +1,9 @@
-zbe_aiCacheDist				= _this select 0;
-zbe_minFrameRate			= _this select 1;
-zbe_debug					= _this select 2;
-zbe_vehicleCacheDistCar		= _this select 3;
-zbe_vehicleCacheDistAir		= _this select 4;
-zbe_vehicleCacheDistBoat	= _this select 5;
+zbe_aiCacheDist				= ADF_Caching_UnitDistance;
+zbe_minFrameRate			= -1;
+zbe_debug					= ADF_Caching_Debug;
+zbe_vehicleCacheDistCar		= ADF_Caching_vehicleDistance_land;
+zbe_vehicleCacheDistAir		= ADF_Caching_vehicleDistance_air;
+zbe_vehicleCacheDistBoat	= ADF_Caching_vehicleDistance_sea;
 
 zbe_allGroups	   			= 0;
 zbe_cachedGroups   			= [];

@@ -81,5 +81,7 @@ missionInit = true;
 if (!isCurator) then {
 	if (!qipTPL_init) then {waitUntil {scriptDone qipTPL_initTPL;};};
 	_unit playMove "AmovPercMstpSlowWrflDnon";
-	[_unit, currentWeapon _unit, currentMuzzle _unit] call ACE_SafeMode_fnc_lockSafety;
+	if (mod_ACE3) then {
+		[_unit, currentWeapon _unit, currentMuzzle _unit] call ACE_SafeMode_fnc_lockSafety;
+	};
 };
