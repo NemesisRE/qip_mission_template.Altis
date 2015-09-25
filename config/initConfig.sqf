@@ -7,7 +7,6 @@ qipTPL_clanFlag = "qip\Images\qip_flag.paa"; // Full path to the clan flag (dime
 qipTPL_coldWeather = false; // enables breathfog, probably more in the futur
 
 /********** UNIT/VEHICLE CACHING **********/
-ADF_Caching_Debug = false;
 ADF_Caching_unitDistance = 1000; // AI Unit caching distance default = 1000 meters.
 ADF_Caching_vehicleDistance_land = 250; // Cars caching distance default = 250 meters.
 ADF_Caching_vehicleDistance_air = 1500; // aircraft caching distance default = 250 meters.

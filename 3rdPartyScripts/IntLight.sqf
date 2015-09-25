@@ -10,7 +10,7 @@
 
 /*Definable*/
 if (isNil {IL_Debug}) then {
-IL_Debug = false; 			//Enable Debug Mode
+IL_Debug = qipTPL_debug; 			//Enable Debug Mode
 };
 if (isNil {IL_Balls}) then {
 IL_Balls = false; 			//Show the attach points (requires Debug mode)
@@ -146,7 +146,7 @@ IL_config = IL_config + [
 		 [ [-0.1,6.5,-0.6], IL_c_green, [0,0,0,0,0.2,0.4], 0.05 ],
 		 [ [-0.1,8,-1.3], IL_c_green, [0,0,0,0,0.2,0.4], 0.05 ]
 	],true,2],
-	[["Heli_Attack_02_base_F"], false, [
+	[["Heli_Attack_02_base_F", ], false, [
 		 [ [0,1.5,-1.5], IL_c_red, IL_attenuation, 5 ],
 		 [ [0,0.5,-1.5], IL_c_red, IL_attenuation, 5 ],
 		 [ [0.07,3.4,-0.05], IL_c_green, [0,0,0,0,0.2,0.4], 0.05 ],

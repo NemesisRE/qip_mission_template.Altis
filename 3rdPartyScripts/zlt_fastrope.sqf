@@ -15,7 +15,7 @@ waituntil {player == player};
 zlt_rope_ropes = [];
 zlt_mutexAction = false;
 
-zlt_rope_helis = ["O_Heli_Light_02_unarmed_F","O_Heli_Light_02_F","B_Heli_Transport_01_F","B_Heli_Transport_01_camo_F","O_Heli_Attack_02_F","O_Heli_Attack_02_black_F","I_Heli_Transport_02_F","B_Heli_Light_01_F","NH90Armed_GR2","NH90_GR2","NH90Armed_GR","NH90_AAF","NH90Armed_AAF","NH90Armed_GR2","NH90","NH90Armed","NH90_GR","B_Heli_Transport_03_F", "B_Heli_Transport_03_unarmed_F","I_Heli_light_03_unarmed_F","O_Heli_Transport_04_covered_F","UH60M"];
+zlt_rope_helis = ["O_Heli_Light_02_unarmed_F","O_Heli_Light_02_F","B_Heli_Transport_01_F","B_Heli_Transport_01_camo_F","O_Heli_Attack_02_F","O_Heli_Attack_02_black_F","O_Heli_Attack_02_SnowHex_FST","I_Heli_Transport_02_F","B_Heli_Light_01_F","NH90Armed_GR2","NH90_GR2","NH90Armed_GR","NH90_AAF","NH90Armed_AAF","NH90Armed_GR2","NH90","NH90Armed","NH90_GR","B_Heli_Transport_03_F", "B_Heli_Transport_03_unarmed_F","I_Heli_light_03_unarmed_F","O_Heli_Transport_04_covered_F","UH60M"];
 zlt_rope_helidata =
 [
 	[
@@ -29,7 +29,7 @@ zlt_rope_helidata =
 		[1.11,2.5,-24.7]
 	],
 	[
-		["O_Heli_Attack_02_F", "O_Heli_Attack_02_black_F"],
+		["O_Heli_Attack_02_F", "O_Heli_Attack_02_black_F", "O_Heli_Attack_02_SnowHex_FST"],
 		[1.3,1.3,-25],
 		[-1.3,1.3,-25]
 	],
