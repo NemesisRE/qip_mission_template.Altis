@@ -607,7 +607,7 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_respawn_BodyRemoveTimer {
-		value = 0;
+		value = 1;
 		typeName = "SCALAR";
 		force = 1;
 	};
@@ -692,17 +692,17 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_viewdistance_viewDistanceOnFoot {
-		value = 0;
+		value = 2500;
 		typeName = "SCALAR";
 		force = 0;
 	};
 	class ace_viewdistance_viewDistanceLandVehicle {
-		value = 0;
+		value = 2500;
 		typeName = "SCALAR";
 		force = 0;
 	};
 	class ace_viewdistance_viewDistanceAirVehicle {
-		value = 0;
+		value = 5000;
 		typeName = "SCALAR";
 		force = 0;
 	};
@@ -752,12 +752,12 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_winddeflection_enabled {
-		value = 0;
+		value = 1;
 		typeName = "BOOL";
 		force = 1;
 	};
 	class ace_winddeflection_vehicleEnabled {
-		value = 0;
+		value = 1;
 		typeName = "BOOL";
 		force = 1;
 	};
