@@ -30,6 +30,7 @@ if (mod_AIA) then {ADF_log_rptMods = ADF_log_rptMods + ", AiATP";};
 if (mod_Ares) then {ADF_log_rptMods = ADF_log_rptMods + ", Ares";};
 if (mod_CSAT) then {ADF_log_rptMods = ADF_log_rptMods + ", TEC CSAT";};
 if (mod_RHS) then {ADF_log_rptMods = ADF_log_rptMods + ", RHS";};
+if (mod_ASRAI) then {ADF_log_rptMods = ADF_log_rptMods + ", ASR AI";};
 publicVariable "ADF_log_CntHC";
 
 // Init reporting

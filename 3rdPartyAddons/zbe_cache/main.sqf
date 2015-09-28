@@ -1,6 +1,6 @@
 zbe_aiCacheDist				= ADF_Caching_UnitDistance;
 zbe_minFrameRate			= -1;
-zbe_debug					= ADF_Caching_Debug;
+zbe_debug					= qipTPL_debug;
 zbe_vehicleCacheDistCar		= ADF_Caching_vehicleDistance_land;
 zbe_vehicleCacheDistAir		= ADF_Caching_vehicleDistance_air;
 zbe_vehicleCacheDistBoat	= ADF_Caching_vehicleDistance_sea;

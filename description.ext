@@ -17,8 +17,8 @@ onLoadIntro = "Powered by [qip]";
 //overviewPicture = "qip_flagg.paa";
 
 /**********  Respawn & JIP Settings **********/
-respawn = 3; //  0 = No respawn, 1 = Spectator, 2 = Instant, respawn just where you died, 3 = Respawn at base (respawn_west marker), 4 = Respawn in your group, 5 = Respawn into an AI unit on your side
-respawnDelay = 30; // Respawn delay time in seconds (set to 3 for testing, set to 300 (= 5 min) for final).
+respawn = 2; //  0 = No respawn, 1 = Spectator, 2 = Instant, respawn just where you died, 3 = Respawn at base (respawn_west marker), 4 = Respawn in your group, 5 = Respawn into an AI unit on your side
+respawnDelay = 5; // Respawn delay time in seconds (set to 3 for testing, set to 300 (= 5 min) for final).
 respawnDialog = 1; // Respawn dialog in case of multiple locations. 0 = false (no dialog), 1 = true (show dialog).
 respawnButton = 1; // Respawn button in the pause menu is automatically now enabled for INSTANT, BASE, GROUP and SIDE respawn types. 0 = disabled, 1 = enabled
 respawnOnStart = -1; // 1 = Respawn on start. Run respawn script on start, 0 = Dont respawn on start. Run respawn script on start, -1 = Dont respawn on start. Don't run respawn script on start.
@@ -29,7 +29,7 @@ respawnTemplates[] = {"MenuInventory","MenuPosition"};
 //respawnTemplatesWest[] = {"MenuPosition"};
 //respawnTemplatesEast[] = {"MenuPosition"};
 //respawnTemplatesCiv[] = {"MenuPosition"};
-respawnTemplatesVirtual[] = {"INSTANT"};
+respawnTemplatesVirtual[] = {"Base"};
 
 /********** Vanilla Revive Settings **********/
 // Vanilla Revive Settings
@@ -58,13 +58,12 @@ allowFunctionsLog = 0; // 0 = Disable, 1 = Enable
 
 /**********  3rd Party includes  **********/
 #include "config\ace3Settings.hpp" // ACE 3 Settings
-#include "3rdPartyAddons\ATM_airdrop\dialog.hpp" // ATM Airdrop
+#include "3rdPartyAddons\LT\LTmenu.hpp"
 
 /**********  Cfg includes  **********/
 class CfgSounds
 {
 	sounds[] = {};
-	#include "3rdPartyAddons\ATM_airdrop\CfgSounds.hpp"
 	#include "config\CfgSounds.hpp"
 };
 
@@ -87,58 +86,13 @@ class CfgUnitInsignia
 
 class Params
 {
-	class initTPL
-	{
-		title = "Initialsierung (Nur zum Bauen abschalten)";
-		values[] = {0,1};
-		texts[] = {"Aus","An"};
-		default = 1;
-	};
-
-	class uavIntro
-	{
-		title = "UAV Intro Sequenze";
-		values[] = {0,1};
-		texts[] = {"Aus","An"};
-		default = 1;
-	};
-
-	class HC
-	{
-		title = "Headlessclient";
-		values[] = {0,1};
-		texts[] = {"Aus","An"};
-		default = 0;
-	};
-
-	class Caching
-	{
-		title = "Einheiten caching";
-		values[] = {0,1};
-		texts[] = {"Aus","An"};
-		default = 1;
-	};
-
-	class Cleanup
-	{
-		title = "Aufräumen Script";
-		values[] = {0,1};
-		texts[] = {"Aus","An"};
-		default = 0;
-	};
-
-	class ServerPerf
-	{
-		title = "Debug: Server Performance ins Log";
-		values[] = {0,1};
-		texts[] = {"Aus","An"};
-		default = 0;
-	};
+	#include "config\CfgParams.hpp"
 };
 
 class CfgFunctions
 {
-	class F // Defines the "owner"
+	#include "3rdPartyAddons\LT\cfgfunctions.hpp"
+	class F
 	{
 		#include "init\functions\tfr\CfgFunctions.hpp"
 	};
@@ -153,4 +107,9 @@ class CfgFunctions
 		#include "init\functions\zeus\CfgFunctions.hpp"
 		#include "init\functions\common\CfgFunctions.hpp"
 	};
+};
+
+class CfgRespawnTemplates
+{
+	#include "config\CfgRespawnTemplates.hpp"
 };
