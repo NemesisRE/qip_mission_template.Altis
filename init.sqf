@@ -2,8 +2,8 @@
 File: init.sqf
 ****************************************************************
 DO NOT EDIT. CONFIGURE IN 'config/'
-	All Files in config directory are there to be changed on a
-	per mission base.
+All Files in config directory are there to be changed on a
+per mission base.
 ****************************************************************/
 
 diag_log "Init - executing init.sqf"; // Reporting. Do NOT edit/remove

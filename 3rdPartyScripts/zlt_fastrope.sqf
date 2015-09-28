@@ -2,12 +2,9 @@
 
 #define MAX_SPEED_WHILE_FASTROPING 10
 #define MAX_SPEED_ROPES_AVAIL 30
-
-
 #define STR_TOSS_ROPES "Toss Ropes"
 #define STR_FAST_ROPE "Fast Rope"
 #define STR_CUT_ROPES "Cut Ropes"
-
 
 if (isdedicated) exitwith {};
 waituntil {player == player};
@@ -70,7 +67,6 @@ zlt_rope_helidata =
 	]
 ];
 
-
 zlt_fnc_tossropes = {
 	private ["_heli","_ropes","_oropes","_rope"];
 	_heli = _this;
@@ -121,36 +117,35 @@ zlt_fnc_ropes_cond = {
 };
 
 zlt_fnc_fastropeaiunits = {
-		private ["_heli","_grunits"];
-		_heli = _this select 0;
-		_grunits = _this select 1;
+	private ["_heli","_grunits"];
+	_heli = _this select 0;
+	_grunits = _this select 1;
 
-		dostop (driver _heli );
-		(driver _heli) setBehaviour "Careless";
-		(driver _heli) setCombatMode "Blue";
+	dostop (driver _heli );
+	(driver _heli) setBehaviour "Careless";
+	(driver _heli) setCombatMode "Blue";
 
-		_heli spawn zlt_fnc_tossropes;
+	_heli spawn zlt_fnc_tossropes;
 
-		[_heli, _grunits] spawn {
-			private ["_units","_heli"];
-			sleep random 0.5;
-			_units = _this select 1;
-			_heli = (_this select 0);
-			_units = _units - [player];
-			_units = _units - [driver _heli];
-			{if (!alive _x or isplayer _x or vehicle _x != _heli) then {_units = _units - [_x];}; } foreach _units;
+	[_heli, _grunits] spawn {
+		private ["_units","_heli"];
+		sleep random 0.5;
+		_units = _this select 1;
+		_heli = (_this select 0);
+		_units = _units - [player];
+		_units = _units - [driver _heli];
+		{if (!alive _x or isplayer _x or vehicle _x != _heli) then {_units = _units - [_x];}; } foreach _units;
 
-			{ sleep (0.5 + random 0.7); _x spawn zlt_fnc_fastropeUnit; } foreach _units;
-			waituntil {sleep 0.5; { (getpos _x select 2) < 1 } count _units == count _units; };
-			sleep 10;
-			(driver _heli) doFollow (leader group (driver _heli ));
-			(driver _heli) setBehaviour "Aware";
-			(driver _heli) setCombatMode "White";
-			_heli call zlt_fnc_cutropes;
+		{ sleep (0.5 + random 0.7); _x spawn zlt_fnc_fastropeUnit; } foreach _units;
+		waituntil {sleep 0.5; { (getpos _x select 2) < 1 } count _units == count _units; };
+		sleep 10;
+		(driver _heli) doFollow (leader group (driver _heli ));
+		(driver _heli) setBehaviour "Aware";
+		(driver _heli) setCombatMode "White";
+		_heli call zlt_fnc_cutropes;
 
-		};
+	};
 };
-
 
 zlt_fnc_fastrope = {
 	zlt_mutexAction = true;
@@ -168,29 +163,25 @@ zlt_fnc_fastropeUnit = {
 	_heli = vehicle _unit;
 	if (_unit == _heli) exitWith {};
 
-	_ropes = (_heli getvariable ["zlt_ropes", []]);
-	if (count _ropes == 0) exitwith {};
+	_ropes = (_heli getVariable ["zlt_ropes", []]);
+	if (count _ropes == 0) exitWith {};
 
 	_rope = _ropes call BIS_fnc_selectRandom;
-	_zmax = 22;
-	_zdelta = 7 / 10  ;
-
-	_zc = _zmax;
-	unassignvehicle _unit;
-	_unit action ["eject", _heli];
-	_unit switchmove "gunner_standup01";
-
-	_unit setpos [(getpos _unit select 0), (getpos _unit select 1), 0 max ((getpos _unit select 2) - 3)];
-	while {alive _unit and (getpos _unit select 2) > 1 and (abs (speed _heli)) < MAX_SPEED_WHILE_FASTROPING  and _zc > -24} do {
-		_unit attachTo [_rope, [0,0,_zc]];
-		_zc = _zc - _zdelta;
-		sleep 0.1;
+	_unit action ["Eject",_heli];
+	sleep 0.5;
+	_unit leaveVehicle _heli;
+	moveOut _unit;
+	_unit allowDamage false;
+	_ropePos = (ropeEndPosition _rope) select 0;
+	_unit setPosATL [(_ropePos select 0),(_ropePos select 1),(_ropePos select 2) -0.5];
+	_unit switchMove "LadderRifleStatic";
+	while {Alive _unit && (((getPos _unit) select 2) > 1)} do {
+		_unit switchMove "LadderRifleStatic";
 	};
-	_unit switchmove "";
-	detach _unit;
-
+	_unit setVelocity [0,0,0];
+	_unit playMove "LadderRifleDownOff";
+	_unit allowDamage true;
 };
-
 
 zlt_fnc_cutropes = {
 	_veh = _this;
@@ -211,8 +202,6 @@ zlt_fnc_createropes = {
 	(vehicle player) call zlt_fnc_tossropes;
 	zlt_mutexAction = false;
 };
-
-
 
 player createDiarySubject [STR_SCRIPTS_NAME,STR_SCRIPTS_NAME];
 player createDiaryRecord [STR_SCRIPTS_NAME,[STR_SCRIPT_NAME, STR_HELP]];

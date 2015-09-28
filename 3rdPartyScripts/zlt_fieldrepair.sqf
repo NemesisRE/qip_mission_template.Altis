@@ -4,13 +4,11 @@
 // http://forums.bistudio.com/showthread.php?168714-Realistic-repair-script
 
 #define DEFAULT_FREPAIR_VER "1P"
-
 #define DEFAULT_FIELDREPAIR_EACH_PART_TIME 10
 #define DEFAULT_FIELDREPAIR_EACH_HARDPART_TIME 30
 #define DEFAULT_FULLREPAIR_LENGTH 60
 #define DEFAULT_REPAIR_TRUCK_USES 10
 #define DEFAULT_FREE_REPAIRS 1
-
 #define STR_FIELD_REPAIR "Field repair"
 #define STR_CANCEL_ACTION "Cancel action"
 #define STR_SERIOUS_REPAIR "Full repair"
@@ -284,8 +282,3 @@ player addEventHandler ["Respawn", {
 	player addAction["<t color='#ff0000'>"+STR_SERIOUS_REPAIR+ "</t>", zlt_fnc_heavyRepair, [], -1, false, true, '','_truck=(vehicle player);_truck getVariable ["zlt_repair_cargo", -1] != -1 and {alive cursorTarget} and {_truck distance cursorTarget <= 15} and {(cursorTarget isKindOf "LandVehicle" or cursorTarget isKindOf "Ship" or cursorTarget isKindOf "Air")} and {not zlt_mutexAction} and {speed cursorTarget <= 3} and {(damage cursorTarget != 0)}'];
 	player addAction["<t color='#FF9900'>"+STR_PUSH_APC+"</t>",zlt_pushapc,[],5,false,true,"","canMove (vehicle player) and ((vehicle player) isKindOf 'Wheeled_APC_F') and player == driver (vehicle player) and surfaceIsWater getpos (vehicle player)  and abs(speed (vehicle player) ) < 3 and not zlt_mutexAction"];
 }];
-
-
-
-
-

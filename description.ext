@@ -58,6 +58,7 @@ allowFunctionsLog = 0; // 0 = Disable, 1 = Enable
 
 /**********  3rd Party includes  **********/
 #include "config\ace3Settings.hpp" // ACE 3 Settings
+#include "3rdPartyAddons\LT\LTmenu.hpp"
 
 /**********  Cfg includes  **********/
 class CfgSounds
@@ -90,6 +91,7 @@ class Params
 
 class CfgFunctions
 {
+	#include "3rdPartyAddons\LT\cfgfunctions.hpp"
 	class F
 	{
 		#include "init\functions\tfr\CfgFunctions.hpp"
