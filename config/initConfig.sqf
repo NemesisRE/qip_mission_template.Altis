@@ -1,5 +1,5 @@
 /********** Mission **********/
-qipTPL_missionInitTime = 30; // Mission Init time counter. Min 30 secs. Add 1 sec per 2 players. 10 players = 35 secs.
+qipTPL_missionInitTime = 30; // Mission Init time counter. Min 30 secs. Add 1 sec per 2 players. starting at 10 -> 20 players = 35 secs.
 qipTPL_clanName = "quies in proelium"; // What is the name of your community/clan. Used in Hints, intro's etc.
 qipTPL_clanTag = "[qip]"; // What is the tag of your community/clan. Used in Hints, intro's etc.
 qipTPL_clanLogo = "qip\Images\qip_logo.paa"; // Full path to the clan logo.

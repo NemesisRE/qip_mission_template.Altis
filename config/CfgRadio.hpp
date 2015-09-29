@@ -1,6 +1,6 @@
 /*
-Sounds die hier definiert wird kann mit dem Klassen namen gestartet werden
-Anhand des Beispiels "wolf1" würde der aufruf dann wie folgt aussehen:
+Funknachrichten die hier definiert werden kann man mit dem Klassennamen starten
+Anhand des Beispiels "RadioMsg" würde der aufruf dann wie folgt aussehen:
 
 unit sideRadio "RadioMsg";
 */
@@ -8,6 +8,6 @@ unit sideRadio "RadioMsg";
 // class RadioMsg
 // {
 // 	name = "";
-// 	sound[] = {"\sound\filename", db-100, 1.0}; // .wss implied
+// 	sound[] = {"qip\Radio\filename.ogg", db-100, 1.0}; // .wss implied
 // 	title = {};
 // };

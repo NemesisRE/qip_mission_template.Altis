@@ -20,9 +20,9 @@ if (qipTPL_init && !isCurator) then {
 		_uavIntro = [
 			vehicle _unit, // Target position (replace MARKERNAME)
 			getText (missionConfigFile >> "onLoadName"), // SITREP text
-			400,                    // 400m altitude
-			200,                    // 200m radius
-			180,                    // 0 degrees viewing angle
+			100,                    // 400m altitude
+			100,                    // 200m radius
+			160,                    // 0 degrees viewing angle
 			1,                      // Clockwise movement
 			[],
 			0
