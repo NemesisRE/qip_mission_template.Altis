@@ -9,7 +9,7 @@ playSound "wolf1";
 //	 // how the sound is referred to in the editor (e.g. trigger effects)
 //	 name = "my_wolf_sound";
 //	 // Dateiname, volume, pitch
-//	 sound[] = {"qip\Sounds\wolf1.ogg", 1, 1};
-//	 // Untertitel verzögerung in sekunden, Untertitel text
+//	 sound[] = {"qip\Sounds\wolf1.ogg", db+0, 1};
+//	 // Untertitel verzögerung in sekunden, Untertitel text (optional)
 //	 titles[] = {1, "*wolf growls*"};
 // };

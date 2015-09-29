@@ -7,5 +7,5 @@ playMusic "MarsIntro";
 
 // class MarsIntro {
 // 	name = "";
-// 	sound[] = {qip\Music\filename.ogg", db+0, 1.0};
+// 	sound[] = {"qip\Music\filename.ogg", db+0, 1.0};
 // };

@@ -1,6 +1,6 @@
-class zeusRespawn
+class testRespawnTpl
 {
 	onPlayerKilled = "";
-	respawnDelay = 1;
+	respawnDelay = 30;
 	respawnOnStart = 0;
 };
