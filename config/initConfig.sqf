@@ -19,6 +19,5 @@ ADF_CleanUp_vehTimer = 600; // x seconds until delete of dead vehicles, for dest
 ADF_CleanUp_abaTimer = 6000; // x seconds a vehicle must be unmanned to be deleted, for _abandoned option.
 
 /********** Additional Settings **********/
-#include "tfr_settings.sqf"
 #include "asr_ai3\asr_ai3_settings.sqf"
 #include "asr_ai3\asr_ai3_settings_ss.sqf"
