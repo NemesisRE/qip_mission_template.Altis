@@ -27,9 +27,11 @@ switch ((side player)) do { //longrange, shortrange, rifradio
 // If radios are enabled in the settings
 if(!f_radios_settings_tfr_disableRadios) then {
 	// Give out respective radios
-	_unit linkItem _radio2;
+	if !(_radio2 in (assignedItems player)) then {
+		_unit linkItem _radio2;
+	};
 
-	if (_unit == (leader (group _unit)) && !tf_no_auto_long_range_radio) then {
+	if (_unit == (leader (group _unit)) && f_radios_settings_tfr_addLongrange) then {
 		_backpackItems = backpackItems player;
 		removeBackpack _unit;
 		_unit addBackpack _radio1;
