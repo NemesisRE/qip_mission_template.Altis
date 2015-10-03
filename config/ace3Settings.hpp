@@ -115,7 +115,7 @@ class ACE_Settings {
 		typeName = "BOOL";
 		force = 0;
 	};
-	class ace_interact_menu_colorTextMax {
+	/*class ace_interact_menu_colorTextMax {
 		value = [1,1,1,1];
 		typeName = "COLOR";
 		force = 0;
@@ -133,37 +133,31 @@ class ACE_Settings {
 	class ace_interact_menu_colorShadowMin {
 		value = [0,0,0,0.25];
 		typeName = "COLOR";
-		isClientSettable = 1;
 		force = 0;
-	};
+	};*/
 	class ace_interact_menu_textSize {
 		value = 3;
 		typeName = "SCALAR";
-		isClientSettable = 1;
 		force = 0;
 	};
 	class ace_interact_menu_shadowSetting {
 		value = 2;
 		typeName = "SCALAR";
-		isClientSettable = 1;
 		force = 0;
 	};
 	class ace_interact_menu_actionOnKeyRelease {
 		value = 1;
 		typeName = "BOOL";
-		isClientSettable = 1;
 		force = 0;
 	};
 	class ace_interact_menu_menuBackground {
 		value = 0;
 		typeName = "SCALAR";
-		isClientSettable = 1;
 		force = 1;
 	};
 	class ace_interact_menu_addBuildingActions {
 		value = 1;
 		typeName = "BOOL";
-		isClientSettable = 1;
 		force = 0;
 	};
 	class ace_interaction_EnableTeamManagement {

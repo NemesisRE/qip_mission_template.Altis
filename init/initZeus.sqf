@@ -11,6 +11,7 @@ private ["_curator","_curatorVehicle"];
 
 	{
 		_curator = _x;
+		if (!local _curator) exitWith {};
 		_curatorVehicle = getAssignedCuratorUnit _curator;
 
 		_curator addCuratorPoints 1;
@@ -26,13 +27,6 @@ private ["_curator","_curatorVehicle"];
 		{
 			_curator setCuratorCoef [_x,0];
 		} forEach ["place","edit","delete","destroy","group","synchronize"];
-
-		[] spawn {
-			waitUntil {(call TFAR_fnc_haveSWRadio)};
-			[(call TFAR_fnc_activeSwRadio), tf_freq_west] call TFAR_fnc_setSwSettings;
-			waitUntil {(call TFAR_fnc_haveLRRadio)};
-			[(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, tf_freq_west_lr] call TFAR_fnc_setLrSettings;
-		};
 
 	} forEach allCurators;
 
