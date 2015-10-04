@@ -8,10 +8,8 @@ private ["_curator","_curatorVehicle"];
 
 [] spawn {
 	[] call qipTPL_fnc_waitForZeus;
-
 	{
 		_curator = _x;
-		if (!local _curator) exitWith {};
 		_curatorVehicle = getAssignedCuratorUnit _curator;
 
 		_curator addCuratorPoints 1;
