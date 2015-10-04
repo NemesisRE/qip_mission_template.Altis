@@ -12,10 +12,24 @@ if (!isDedicated && (isNull player)) then {
 	waitUntil {!(isNull player)};
 };
 
-qipTPL_initBriefing = [] execVM 'config\briefing.sqf'; // Load Mission Briefing
-qipTPL_initCredits = [] execVM 'init\tplCredits.sqf';
-#include "config\initConfig.sqf"
-#include "init\initPre.sqf"
+isCurator					= [player] call qipTPL_fnc_isCurator;
+qipTPL_init					= ["initTPL"] call qipTPL_fnc_paramToBool;
+qipTPL_uavIntro				= ["uavIntro"] call qipTPL_fnc_paramToBool;
+qipTPL_debug				= ["debugTPL"] call qipTPL_fnc_paramToBool;
+ADF_HC_init					= ["HC"] call qipTPL_fnc_paramToBool; // Enable the Headless Client [true/false].
+ADF_Log_ServerPerfEnable	= ["ServerPerf"] call qipTPL_fnc_paramToBool; // Enable server performance logging in RPT. [true/false]
+ADF_Caching					= ["Caching"] call qipTPL_fnc_paramToBool; // // Enable/disable caching of units and vehicles. Auto Disabled when HC is active. [true/false].
+ADF_CleanUp					= ["Cleanup"] call qipTPL_fnc_paramToBool; // enable cleaning up of dead bodies (friendly, enemy, vehicles, etc.) [true/false].
+
+if (isCurator) exitWith {isCurator = true;};
+
+if (qipTPL_init) then {
+	player enableSimulation false;
+	if (!qipTPL_uavIntro) then {
+		_l = ["tLayer"] call BIS_fnc_rscLayer;
+		_l cutText ["", "BLACK IN", (qipTPL_missionInitTime + 5)];
+	};
+};
 
 if (ADF_HC_init) then {
 	ADF_run_HC = [] execVM "init\ADF\ADF_HC.sqf";

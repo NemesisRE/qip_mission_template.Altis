@@ -15,10 +15,13 @@ _unitString =  toLower(roleDescription _unit);
 _setLoadout = [_unit,_unitString] execVM "config\loadout.sqf"; waitUntil {scriptDone _setLoadout};
 
 if (mod_ACE3) then { // ACE3 items added by default
-	//_defaultItems = ["ACE_EarPlugs","ACE_CableTie","ace_mapTools","ACE_IR_Strobe_Item"];
-	_defaultItems = ["ACE_EarPlugs"];
+	_defaultUniformItems = [["ACE_EarPlugs", 1], ["ACE_CableTie", 2], ["ACE_IR_Strobe_Item", 1], ["ACE_MapTools", 1], ["ACE_microDAGR", 1], ["ACE_Flashlight_MX991", 1]];
 	{
-		_unit removeItems _x;
-		_unit addItemToUniform _x;
-	} forEach _defaultItems;
+		_item = _x select 0;
+		_quantity = _x select 1;
+		_unit removeItems _item;
+		for "_i" from 1 to _quantity do {_unit addItemToUniform _item;};
+	} forEach _defaultUniformItems;
 };
+
+setLoadout = true;

@@ -59,6 +59,32 @@ tf_freq_east_lr = [0,7,["74.4","41","42","43","44","45","46","47","40.6"],0,nil,
 tf_freq_guer = [0,7,["510","520","530","540","550","560","570","50.6"],0,nil,7,0]; publicVariable "tf_freq_guer";
 tf_freq_guer_lr = [0,7,["64.4","51","52","53","54","55","56","57","50.6"],0,nil,8,0]; publicVariable "tf_freq_guer_lr";
 
+[] spawn {
+	[] call qipTPL_fnc_waitForZeus;
+
+	if (!([player] call qipTPL_fnc_isCurator)) exitWith {};
+	waitUntil {(call TFAR_fnc_haveSWRadio)};
+	{
+		_currentSwRadio = _x;
+		_currentSwRadioString = (_x splitString "_") select 1;
+		switch (true) do {
+			case (_currentSwRadioString == "anprc152"): {
+				[_currentSwRadio, tf_freq_west] call TFAR_fnc_setSwSettings;
+			};
+			case (_currentSwRadioString == "fadak"): {
+				[_currentSwRadio, tf_freq_east] call TFAR_fnc_setSwSettings;
+			};
+			case (_currentSwRadioString == "anprc148jem"): {
+				[_currentSwRadio, tf_freq_guer] call TFAR_fnc_setSwSettings;
+			};
+			default {};
+		};
+	} forEach (player call TFAR_fnc_radiosList);
+	waitUntil {(call TFAR_fnc_haveLRRadio)};
+	[TF_curator_backpack_1, "TF_curatorBackPack", tf_freq_west_lr] call TFAR_fnc_setLrSettings;
+	[TF_curator_backpack_2, "TF_curatorBackPack", tf_freq_east_lr] call TFAR_fnc_setLrSettings;
+	[TF_curator_backpack_3, "TF_curatorBackPack", tf_freq_guer_lr] call TFAR_fnc_setLrSettings;
+};
 
 // _settingsSwWest = false call TFAR_fnc_generateSwSettings;
 // _settingsSwWest set [2,["310","320","330","340","350","360","370","30.6"]];

@@ -5,4 +5,7 @@ class zeus
 	class waitForZeus{};
 	class addUnitsToCurator{};
 	class coopZeus{};
+	class initZeus{
+		postInit = 1;
+	};
 };
