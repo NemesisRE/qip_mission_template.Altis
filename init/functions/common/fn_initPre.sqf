@@ -11,6 +11,10 @@ Previous: ADF_init_vars.sqf
 
 diag_log "Init - executing initPre.sqf"; // Reporting. Do NOT edit/remove
 
+qipTPL_initBriefing = [] execVM 'config\briefing.sqf'; // Load Mission Briefing
+qipTPL_initCredits = [] execVM 'init\tplCredits.sqf';
+qipTPL_initConfig = [] execVM "config\initConfig.sqf";
+
 // Get addon/mod/dlc availability from the A3 config file and store them in easy to use variables
 dlc_MarksMan 				= isClass (configFile >> "CfgMods" >> "Mark"); // Check if Marksman DLC is present
 dlc_Bundle 					= isClass (configFile >> "CfgMods" >> "DLCBundle"); // Check if DLC Bundle is present
@@ -27,31 +31,14 @@ mod_RHS	 					= isClass (configFile >> "CfgPatches" >> "rhs_main"); // Red Hamme
 mod_ASRAI 					= isClass (configFile >> "CfgPatches" >> "asr_ai"); // Check if ASR AI is present
 
 // Init global mission vars
-missionInit 				= false;
 ADF_isHC 					= false;
-isCurator					= [player] call qipTPL_fnc_isCurator;
-qipTPL_init					= ["initTPL"] call qipTPL_fnc_paramToBool;
-qipTPL_uavIntro				= ["uavIntro"] call qipTPL_fnc_paramToBool;
-qipTPL_debug				= ["debugTPL"] call qipTPL_fnc_paramToBool;
-ADF_HC_init					= ["HC"] call qipTPL_fnc_paramToBool; // Enable the Headless Client [true/false].
-ADF_Log_ServerPerfEnable	= ["ServerPerf"] call qipTPL_fnc_paramToBool; // Enable server performance logging in RPT. [true/false]
-ADF_Caching					= ["Caching"] call qipTPL_fnc_paramToBool; // // Enable/disable caching of units and vehicles. Auto Disabled when HC is active. [true/false].
-ADF_CleanUp					= ["Cleanup"] call qipTPL_fnc_paramToBool; // enable cleaning up of dead bodies (friendly, enemy, vehicles, etc.) [true/false].
+setLoadout					= false;
 
 if (isNil "ADF_HC_connected") then {
 	ADF_HC_connected = false;
-};
-
-if (!qipTPL_uavIntro && qipTPL_init && !isCurator) then {
-	_l = ["tLayer"] call BIS_fnc_rscLayer;
-	_l cutText ["", "BLACK IN", (qipTPL_missionInitTime + 5)];
 };
 
 player setVariable ["BIS_noCoreConversations",true]; // Disable AI chatter.
 enableSaving [false,false]; // Disables save when aborting.
 enableTeamSwitch false; // Disables team switch.
 enableSentences false; // Disable AI chatter.
-
-if (qipTPL_init && !isCurator) then {
-	player enableSimulation false;
-};

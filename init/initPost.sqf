@@ -13,9 +13,9 @@ _timerInput = qipTPL_missionInitTime; // Mission Init time counter. Min 30 secs.
 _timer = _timerInput / 100;
 _cntStop = -1;
 
-if (isDedicated || ADF_isHC) exitWith {missionInit = true;};
+if (isDedicated || ADF_isHC) exitWith {};
 
-if (qipTPL_init && !isCurator) then {
+if (qipTPL_init) then {
 	if (qipTPL_uavIntro) then {
 		_uavIntro = [
 			vehicle _unit, // Target position (replace MARKERNAME)
@@ -76,12 +76,5 @@ if (qipTPL_init && !isCurator) then {
 };
 finishMissionInit;
 hintSilent "";
-missionInit = true;
 
-if (!isCurator) then {
-	if (!qipTPL_init) then {waitUntil {scriptDone qipTPL_initTPL;};};
-	_unit playMove "AmovPercMstpSlowWrflDnon";
-	if (mod_ACE3) then {
-		[_unit, currentWeapon _unit, currentMuzzle _unit] call ACE_SafeMode_fnc_lockSafety;
-	};
-};
+player playMove "AmovPercMstpSlowWrflDnon";
