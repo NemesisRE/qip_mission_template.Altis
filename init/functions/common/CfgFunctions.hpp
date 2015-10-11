@@ -8,12 +8,7 @@ class common
 	class initPre{
 		preInit = 1;
 	};
-};
-
-class tfrSettings
-{
-	file = "config";
-	class tfrSettings{
+	class tfrSettings {
 		preInit = 1;
 	};
 };

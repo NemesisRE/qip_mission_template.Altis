@@ -35,7 +35,7 @@ class Caching
 	title = "Einheiten caching";
 	values[] = {0,1};
 	texts[] = {"Aus","An"};
-	default = 1;
+	default = 0;
 };
 
 class Cleanup
