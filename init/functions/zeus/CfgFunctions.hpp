@@ -2,10 +2,11 @@ class zeus
 {
 	file = "init\functions\zeus";
 	class isCurator{};
-	class waitForZeus{};
 	class addUnitsToCurator{};
 	class coopZeus{};
+	class configZeus{};
+	class tfrZeus{};
 	class initZeus{
-		postInit = 1;
+		preInit = 1;
 	};
 };

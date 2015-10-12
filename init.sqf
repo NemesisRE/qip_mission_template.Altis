@@ -21,7 +21,9 @@ ADF_Log_ServerPerfEnable	= ["ServerPerf"] call qipTPL_fnc_paramToBool; // Enable
 ADF_Caching					= ["Caching"] call qipTPL_fnc_paramToBool; // // Enable/disable caching of units and vehicles. Auto Disabled when HC is active. [true/false].
 ADF_CleanUp					= ["Cleanup"] call qipTPL_fnc_paramToBool; // enable cleaning up of dead bodies (friendly, enemy, vehicles, etc.) [true/false].
 
-if (isCurator) exitWith {isCurator = true;};
+if (isCurator) exitWith {
+	[] spawn qipTPL_fnc_tfrZeus;
+};
 
 if (qipTPL_init) then {
 	player enableSimulation false;

@@ -8,5 +8,4 @@ waitUntil {(setLoadout)};
 if (mod_ACE3) then {
 	[player, currentWeapon player, currentMuzzle player] call ACE_SafeMode_fnc_lockSafety;
 };
-if (mod_TFAR) then {qipTPL_initRadio = [] execVM "init\tfr\tfr_init.sqf";};
 if (mod_Ares) then {qipTPL_initAres = [] execVM "init\ares\initAres.sqf";};

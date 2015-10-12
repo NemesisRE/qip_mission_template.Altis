@@ -92,10 +92,6 @@ class Params
 class CfgFunctions
 {
 	#include "3rdPartyAddons\LT\cfgfunctions.hpp"
-	class F
-	{
-		#include "init\functions\tfr\CfgFunctions.hpp"
-	};
 
 	class ADF
 	{
