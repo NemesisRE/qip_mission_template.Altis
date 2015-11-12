@@ -54,6 +54,7 @@ switch (_strLoadout) do {
 		_unit linkItem "ItemMap";
 		_unit linkItem "ItemCompass";
 		_unit linkItem "ItemWatch";
+		_unit linkItem "ItemRadio";
 		_unit linkItem "BWA3_ItemNaviPad";
 		_unit linkItem "rhsusf_ANPVS_15";
 	};
@@ -95,6 +96,7 @@ switch (_strLoadout) do {
 		comment "Add items";
 		_unit linkItem "ItemMap";
 		_unit linkItem "ItemCompass";
+		_unit linkItem "ItemRadio";
 		_unit linkItem "BWA3_ItemNaviPad";
 		_unit linkItem "rhsusf_ANPVS_15";
 	};
@@ -129,7 +131,7 @@ switch (_strLoadout) do {
 		_unit linkItem "ItemMap";
 		_unit linkItem "ItemCompass";
 		_unit linkItem "ItemWatch";
-		_unit linkItem "tf_anprc152_1";
+		_unit linkItem "ItemRadio";
 		_unit linkItem "ItemGPS";
 		_unit linkItem "TRYK_G_bala_wh_NV";
 	};
@@ -168,7 +170,7 @@ switch (_strLoadout) do {
 		_unit linkItem "ItemMap";
 		_unit linkItem "ItemCompass";
 		_unit linkItem "ItemWatch";
-		_unit linkItem "tf_anprc152_1";
+		_unit linkItem "ItemRadio";
 		_unit linkItem "ItemGPS";
 		_unit linkItem "TRYK_G_bala_wh_NV";
 	};
@@ -207,7 +209,7 @@ switch (_strLoadout) do {
 		_unit linkItem "ItemMap";
 		_unit linkItem "ItemCompass";
 		_unit linkItem "ItemWatch";
-		_unit linkItem "tf_anprc152_1";
+		_unit linkItem "ItemRadio";
 		_unit linkItem "ItemGPS";
 		_unit linkItem "TRYK_G_bala_wh_NV";
 	};
@@ -243,7 +245,7 @@ switch (_strLoadout) do {
 		_unit linkItem "ItemMap";
 		_unit linkItem "ItemCompass";
 		_unit linkItem "ItemWatch";
-		_unit linkItem "tf_anprc152_1";
+		_unit linkItem "ItemRadio";
 		_unit linkItem "ItemGPS";
 		_unit linkItem "TRYK_G_bala_wh_NV";
 	};
@@ -282,7 +284,7 @@ switch (_strLoadout) do {
 		_unit linkItem "ItemMap";
 		_unit linkItem "ItemCompass";
 		_unit linkItem "ItemWatch";
-		_unit linkItem "tf_anprc152_1";
+		_unit linkItem "ItemRadio";
 		_unit linkItem "ItemGPS";
 		_unit linkItem "TRYK_G_bala_wh_NV";
 	};

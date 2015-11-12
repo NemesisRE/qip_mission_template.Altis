@@ -6,6 +6,7 @@ diag_log "Init - executing initTPL.sqf"; // Reporting. Do NOT edit/remove
 
 waitUntil {(setLoadout)};
 if (mod_ACE3) then {
-	[player, currentWeapon player, currentMuzzle player] call ACE_SafeMode_fnc_lockSafety;
+	if ( vehicle player == player ) then {
+		[player, currentWeapon player, currentMuzzle player] call ACE_SafeMode_fnc_lockSafety;
+	};
 };
-if (mod_Ares) then {qipTPL_initAres = [] execVM "init\ares\initAres.sqf";};

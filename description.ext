@@ -55,10 +55,10 @@ enableDebugConsole = 1;	// Enable the debug console where (0=disabled),(1=Admins
 aiKills = 0; // 0 = Disable, 1 = Enable
 enableItemsDropping = 1; // 0 = Disable, 1 = Enable
 allowFunctionsLog = 0; // 0 = Disable, 1 = Enable
+saving = 0; // disable saving
 
 /**********  3rd Party includes  **********/
 #include "config\ace3Settings.hpp" // ACE 3 Settings
-#include "3rdPartyAddons\LT\LTmenu.hpp"
 
 /**********  Cfg includes  **********/
 class CfgSounds
@@ -91,8 +91,6 @@ class Params
 
 class CfgFunctions
 {
-	#include "3rdPartyAddons\LT\cfgfunctions.hpp"
-
 	class ADF
 	{
 		#include "init\functions\ADF\CfgFunctions.hpp"

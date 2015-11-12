@@ -13,9 +13,11 @@ _timerInput = qipTPL_missionInitTime; // Mission Init time counter. Min 30 secs.
 _timer = _timerInput / 100;
 _cntStop = -1;
 
-if (isDedicated || ADF_isHC) exitWith {};
+if (isDedicated || ADF_isHC || isCurator) exitWith {};
 
 if (qipTPL_init) then {
+	_hudStatus = shownHUD;
+	showHUD [false,false,false,false,false,false,false,false];
 	if (qipTPL_uavIntro) then {
 		_uavIntro = [
 			vehicle _unit, // Target position (replace MARKERNAME)
@@ -72,9 +74,18 @@ if (qipTPL_init) then {
 
 	hint parseText _postInitMsg;
 	sleep 5;
+	showHUD _hudStatus;
 	_unit enableSimulation true;
 };
 finishMissionInit;
 hintSilent "";
 
-player playMove "AmovPercMstpSlowWrflDnon";
+if ( vehicle player == player ) then {
+	if ( primaryWeapon player != "" ) then {
+		player playMove "AmovPercMstpSlowWrflDnon";
+	} else {
+		if ( handgunWeapon player != "" ) then {
+			player playMove "AmovPercMstpSrasWpstDnon_AmovPercMstpSrasWlnrDnon";
+		};
+	};
+};

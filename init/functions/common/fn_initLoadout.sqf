@@ -6,8 +6,9 @@ Configure the Lodout in config\loadout.sqf
 diag_log "Init - executing initLoadout.sqf"; // Reporting. Do NOT edit/remove
 
 private ["_unit","_unitString","_setLoadout","_defaultItems"];
-_unit = player;
+_unit = _x;
 
+if ((_unit getVariable "setLoadout")) exitWith {setLoadout = true;};
 if (!local _unit) exitWith {};
 
 _unitString =  toLower(roleDescription _unit);
@@ -15,7 +16,7 @@ _unitString =  toLower(roleDescription _unit);
 _setLoadout = [_unit,_unitString] execVM "config\loadout.sqf"; waitUntil {scriptDone _setLoadout};
 
 if (mod_ACE3) then { // ACE3 items added by default
-	_defaultUniformItems = [["ACE_EarPlugs", 1], ["ACE_CableTie", 2], ["ACE_IR_Strobe_Item", 1], ["ACE_MapTools", 1], ["ACE_microDAGR", 1], ["ACE_Flashlight_MX991", 1]];
+	_defaultUniformItems = [["ACE_EarPlugs", 1], ["ACE_CableTie", 5], ["ACE_IR_Strobe_Item", 1], ["ACE_MapTools", 1], ["ACE_microDAGR", 1], ["ACE_Flashlight_MX991", 1]];
 	{
 		_item = _x select 0;
 		_quantity = _x select 1;
@@ -23,5 +24,5 @@ if (mod_ACE3) then { // ACE3 items added by default
 		for "_i" from 1 to _quantity do {_unit addItemToUniform _item;};
 	} forEach _defaultUniformItems;
 };
-
+_unit setVariable ["setLoadout", true, true];
 setLoadout = true;

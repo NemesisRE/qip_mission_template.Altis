@@ -1,5 +1,5 @@
 // Thanks to tpw for the particle params!
-if (isDedicated) exitWith {};
+if (isDedicated || !qipTPL_breathFog) exitWith {};
 
 doobreath = {
 	private ["_pos", "_ps", "_nearGetBreath"];

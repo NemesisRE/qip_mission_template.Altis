@@ -9,6 +9,4 @@ if (!mod_ACE3) then {
 };
 [] execVM "3rdPartyScripts\IntLight.sqf"; // Interior Lighting
 [] execVM "3rdPartyScripts\zlt_fastrope.sqf"; // Helicopter fastrope script by zealot111
-if (qipTPL_coldWeather) then {
-	[] execVM "3rdPartyScripts\breathfog.sqf";
-};
+[] execVM "3rdPartyScripts\breathfog.sqf";

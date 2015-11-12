@@ -21,15 +21,18 @@ ADF_Log_ServerPerfEnable	= ["ServerPerf"] call qipTPL_fnc_paramToBool; // Enable
 ADF_Caching					= ["Caching"] call qipTPL_fnc_paramToBool; // // Enable/disable caching of units and vehicles. Auto Disabled when HC is active. [true/false].
 ADF_CleanUp					= ["Cleanup"] call qipTPL_fnc_paramToBool; // enable cleaning up of dead bodies (friendly, enemy, vehicles, etc.) [true/false].
 
-if (isCurator) exitWith {
+if (isCurator) then {
 	[] spawn qipTPL_fnc_tfrZeus;
-};
-
-if (qipTPL_init) then {
-	player enableSimulation false;
-	if (!qipTPL_uavIntro) then {
-		_l = ["tLayer"] call BIS_fnc_rscLayer;
-		_l cutText ["", "BLACK IN", (qipTPL_missionInitTime + 5)];
+	if (mod_Ares) then {
+		qipTPL_initAres = [] execVM "init\ares\initAres.sqf";
+	};
+} else {
+	if (qipTPL_init) then {
+		player enableSimulation false;
+		if (!qipTPL_uavIntro) then {
+			_l = ["tLayer"] call BIS_fnc_rscLayer;
+			_l cutText ["", "BLACK IN", (qipTPL_missionInitTime + 5)];
+		};
 	};
 };
 
