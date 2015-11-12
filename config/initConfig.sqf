@@ -6,7 +6,7 @@ qipTPL_clanLogo = "qip\Images\qip_logo.paa"; // Full path to the clan logo.
 qipTPL_clanFlag = "qip\Images\qip_flag.paa"; // Full path to the clan flag (dimensions 512 x 256, pref PAA format).
 
 /********** Loadout **********/
-qipTPL_addDefaults = false;
+qipTPL_addDefaults = true;
 // If the Default items are already somewhere in the inventory they will be removed!
 qipTPL_defaultUniformItems = [
 								["ACE_EarPlugs", 1],
@@ -15,12 +15,6 @@ qipTPL_defaultUniformItems = [
 								["ACE_MapTools", 1],
 								["ACE_microDAGR", 1],
 								["ACE_Flashlight_MX991", 1]
-];
-qipTPL_defaultVestItems = [
-								["ACE_quikclot", 20],
-								["ACE_epinephrine", 5],
-								["ACE_morphine", 5],
-								["ACE_tourniquet", 4]
 ];
 
 /********** Winteratmosphere **********/
