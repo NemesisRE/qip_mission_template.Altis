@@ -5,6 +5,24 @@ qipTPL_clanTag = "[qip]"; // What is the tag of your community/clan. Used in Hin
 qipTPL_clanLogo = "qip\Images\qip_logo.paa"; // Full path to the clan logo.
 qipTPL_clanFlag = "qip\Images\qip_flag.paa"; // Full path to the clan flag (dimensions 512 x 256, pref PAA format).
 
+/********** Loadout **********/
+qipTPL_addDefaults = false;
+// If the Default items are already somewhere in the inventory they will be removed!
+qipTPL_defaultUniformItems = [
+								["ACE_EarPlugs", 1],
+								["ACE_CableTie", 5],
+								["ACE_IR_Strobe_Item", 1],
+								["ACE_MapTools", 1],
+								["ACE_microDAGR", 1],
+								["ACE_Flashlight_MX991", 1]
+];
+qipTPL_defaultVestItems = [
+								["ACE_quikclot", 20],
+								["ACE_epinephrine", 5],
+								["ACE_morphine", 5],
+								["ACE_tourniquet", 4]
+];
+
 /********** Winteratmosphere **********/
 qipTPL_breathFog = false; // enables breathfog, probably more in the futur
 

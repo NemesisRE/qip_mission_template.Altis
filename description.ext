@@ -84,6 +84,11 @@ class CfgUnitInsignia
 	#include "config\CfgUnitInsignia.hpp"
 };
 
+class CfgIdentities
+{
+	#include "config\CfgIdentities.hpp"
+};
+
 class Params
 {
 	#include "config\CfgParams.hpp"
