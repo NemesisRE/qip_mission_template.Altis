@@ -38,10 +38,6 @@ respawnTemplatesVirtual[] = {"Base"};
 //reviveBleedOutDelay = 180;
 
 /**********  Mission specific settings **********/
-showGPS = 1; // Allow GPS where (0=disallowed), (1=allowed).
-showCompass = 1; // Allow Compass (0=disallowed), (1=allowed).
-showWatch = 1; // Allow Watch (0=disallowed), (1=allowed).
-showMap = 1;  // Allow Map (0=disallowed), (1=allowed).
 disabledAI = 1; // Enable AI's to fill empty playable slots (0=disable), (1=enable).
 forceRotorLibSimulation = 0; // (0=options based), (1=force enable), (2=force disable).
 taskManagement_markers2D = 1; // 0: do not use new 2D markers (default), 1: replace task markers with new 2D markers
@@ -55,6 +51,7 @@ enableDebugConsole = 1;	// Enable the debug console where (0=disabled),(1=Admins
 aiKills = 0; // 0 = Disable, 1 = Enable
 enableItemsDropping = 1; // 0 = Disable, 1 = Enable
 allowFunctionsLog = 0; // 0 = Disable, 1 = Enable
+allowFunctionsRecompile = 1; // 0 = Disable, 1 = Enable
 saving = 0; // disable saving
 
 /**********  3rd Party includes  **********/
@@ -63,35 +60,32 @@ saving = 0; // disable saving
 /**********  Cfg includes  **********/
 class CfgSounds
 {
-	sounds[] = {};
-	#include "config\CfgSounds.hpp"
+	#include "config\CfgFiles\CfgSounds.hpp"
 };
 
 class CfgMusic
 {
-	tracks[]={};
-	#include "config\CfgMusic.hpp"
+	#include "config\CfgFiles\CfgMusic.hpp"
 };
 
 class CfgRadio
 {
-	sounds[] = {};
-	#include "config\CfgRadio.hpp"
+	#include "config\CfgFiles\CfgRadio.hpp"
 };
 
 class CfgUnitInsignia
 {
-	#include "config\CfgUnitInsignia.hpp"
+	#include "config\CfgFiles\CfgUnitInsignia.hpp"
 };
 
 class CfgIdentities
 {
-	#include "config\CfgIdentities.hpp"
+	#include "config\CfgFiles\CfgIdentities.hpp"
 };
 
 class Params
 {
-	#include "config\CfgParams.hpp"
+	#include "config\CfgFiles\CfgParams.hpp"
 };
 
 class CfgFunctions
@@ -110,5 +104,5 @@ class CfgFunctions
 
 class CfgRespawnTemplates
 {
-	#include "config\CfgRespawnTemplates.hpp"
+	#include "config\CfgFiles\CfgRespawnTemplates.hpp"
 };
