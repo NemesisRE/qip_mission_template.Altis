@@ -31,12 +31,7 @@ mod_RHS	 					= isClass (configFile >> "CfgPatches" >> "rhs_main"); // Red Hamme
 mod_ASRAI 					= isClass (configFile >> "CfgPatches" >> "asr_ai"); // Check if ASR AI is present
 
 // Init global mission vars
-ADF_isHC 					= false;
 setLoadout					= false;
-
-if (isNil "ADF_HC_connected") then {
-	ADF_HC_connected = false;
-};
 
 player setVariable ["BIS_noCoreConversations",true]; // Disable AI chatter.
 enableSaving [false,false]; // Disables save when aborting.

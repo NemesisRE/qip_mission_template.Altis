@@ -13,7 +13,7 @@ _timerInput = qipTPL_missionInitTime; // Mission Init time counter. Min 30 secs.
 _timer = _timerInput / 100;
 _cntStop = -1;
 
-if (isDedicated || ADF_isHC || isCurator) exitWith {};
+if (isDedicated || isHC || isCurator) exitWith {};
 
 if (qipTPL_init) then {
 	_hudStatus = shownHUD;

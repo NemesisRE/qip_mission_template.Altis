@@ -16,16 +16,15 @@ isCurator					= [player] call qipTPL_fnc_isCurator;
 qipTPL_init					= ["initTPL"] call qipTPL_fnc_paramToBool;
 qipTPL_uavIntro				= ["uavIntro"] call qipTPL_fnc_paramToBool;
 qipTPL_debug				= ["debugTPL"] call qipTPL_fnc_paramToBool;
-ADF_HC_init					= ["HC"] call qipTPL_fnc_paramToBool; // Enable the Headless Client [true/false].
 ADF_Log_ServerPerfEnable	= ["ServerPerf"] call qipTPL_fnc_paramToBool; // Enable server performance logging in RPT. [true/false]
-ADF_Caching					= ["Caching"] call qipTPL_fnc_paramToBool; // // Enable/disable caching of units and vehicles. Auto Disabled when HC is active. [true/false].
+ADF_Caching					= ["Caching"] call qipTPL_fnc_paramToBool; // // Enable/disable caching of units and vehicles.
 ADF_CleanUp					= ["Cleanup"] call qipTPL_fnc_paramToBool; // enable cleaning up of dead bodies (friendly, enemy, vehicles, etc.) [true/false].
+if !(isServer || hasInterface) then {
+	isHC					= true;
+};
 
 if (isCurator) then {
 	[] spawn qipTPL_fnc_tfrZeus;
-	if (mod_Ares) then {
-		qipTPL_initAres = [] execVM "init\ares\initAres.sqf";
-	};
 } else {
 	if (qipTPL_init) then {
 		player enableSimulation false;
@@ -36,17 +35,13 @@ if (isCurator) then {
 	};
 };
 
-if (ADF_HC_init) then {
-	ADF_run_HC = [] execVM "init\ADF\ADF_HC.sqf";
-};
-
 /********** Server only Init **********/
 if (isServer) then  { //server init
 	#include "init\ADF\ADF_init_rpt.sqf"
 	if (ADF_CleanUp) then {
 		[] execVM "3rdPartyScripts\delete.sqf";
 	}; // garbage collector.
-	if (ADF_Caching && !ADF_HC_connected) then {
+	if (ADF_Caching) then {
 		[] execVM "3rdPartyAddons\zbe_cache\main.sqf";
 	}; // Configure in ADF_init_config.sqf
 };

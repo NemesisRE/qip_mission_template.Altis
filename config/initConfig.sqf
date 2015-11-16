@@ -9,16 +9,17 @@ qipTPL_clanFlag = "qip\Images\qip_flag.paa"; // Full path to the clan flag (dime
 qipTPL_addDefaults = true;
 // If the Default items are already somewhere in the inventory they will be removed!
 qipTPL_defaultUniformItems = [
-								["ACE_EarPlugs", 1],
-								["ACE_CableTie", 5],
-								["ACE_IR_Strobe_Item", 1],
-								["ACE_MapTools", 1],
-								["ACE_microDAGR", 1],
-								["ACE_Flashlight_MX991", 1]
+	["ACE_EarPlugs", 1],
+	["ACE_CableTie", 5],
+	["ACE_IR_Strobe_Item", 1],
+	["ACE_MapTools", 1],
+	["ACE_microDAGR", 1],
+	["ACE_Flashlight_MX991", 1]
 ];
 
 /********** Winteratmosphere **********/
 qipTPL_breathFog = false; // enables breathfog, probably more in the futur
+qipMOD_snowStorm = false; // enables the snowStorm from the qipMod
 
 /********** UNIT/VEHICLE CACHING **********/
 ADF_Caching_unitDistance = 1000; // AI Unit caching distance default = 1000 meters.

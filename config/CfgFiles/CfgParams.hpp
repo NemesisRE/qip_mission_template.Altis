@@ -22,14 +22,6 @@ class debugTPL
 	default = 0;
 };
 
-class HC
-{
-	title = "Headlessclient";
-	values[] = {0,1};
-	texts[] = {"Aus","An"};
-	default = 0;
-};
-
 class Caching
 {
 	title = "Einheiten caching";

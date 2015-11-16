@@ -15,11 +15,7 @@ Executed on server only
 diag_log "ADF RPT: Init - executing ADF_init_rpt.sqf"; // Reporting. Do NOT edit/remove
 
 // Init
-ADF_log_CntHC = 0;
 ADF_log_rptMods = "";
-if !(isNil "HC1") then {ADF_log_CntHC = ADF_log_CntHC + 1};
-if !(isNil "HC2") then {ADF_log_CntHC = ADF_log_CntHC + 1};
-if !(isNil "HC3") then {ADF_log_CntHC = ADF_log_CntHC + 1};
 if (isMultiplayer) then {ADF_log_pUnits = playableUnits;} else {ADF_log_pUnits = switchableUnits};
 if (((count allUnits)-(count ADF_log_pUnits)) < 0) then {ADF_log_aiUnits = 0} else {ADF_log_aiUnits = ((count allUnits)-(count ADF_log_pUnits))};
 if (mod_CBA) then {ADF_log_rptMods = ADF_log_rptMods + "CBA A3";};
@@ -31,7 +27,6 @@ if (mod_Ares) then {ADF_log_rptMods = ADF_log_rptMods + ", Ares";};
 if (mod_CSAT) then {ADF_log_rptMods = ADF_log_rptMods + ", TEC CSAT";};
 if (mod_RHS) then {ADF_log_rptMods = ADF_log_rptMods + ", RHS";};
 if (mod_ASRAI) then {ADF_log_rptMods = ADF_log_rptMods + ", ASR AI";};
-publicVariable "ADF_log_CntHC";
 
 // Init reporting
 diag_log ""; diag_log "";
@@ -40,14 +35,13 @@ diag_log format ["ADF RPT: Init - Mission name: %1",(getText (missionConfigFile 
 diag_log format ["ADF RPT: Init - Mission developer: %1",(getText (missionConfigFile >> "author"))];
 diag_log "--------------------------------------------------------------------------------------";
 diag_log format ["ADF RPT: Init - Number of clients connected: %1", (count ADF_log_pUnits)];
-diag_log format ["ADF RPT: Init - Number of HC's connected: %1", ADF_log_CntHC];
 diag_log "--------------------------------------------------------------------------------------";
 diag_log format ["ADF RPT: Init - Number of AI's active: %1", ADF_log_aiUnits];
 diag_log "--------------------------------------------------------------------------------------";
 diag_log format ["ADF RPT: Init - ADF autodetect addons active: %1", ADF_log_rptMods];
 diag_log "--------------------------------------------------------------------------------------";
 diag_log ""; diag_log "";
-ADF_log_aiUnits = nil; ADF_log_rptMods = nil; ADF_log_CntHC = nil;
+ADF_log_aiUnits = nil; ADF_log_rptMods = nil;
 
 if (!mod_CBA) exitWith { // Terminate init as CBA is NOT present
 	["### ERROR! CBA_A3 not present. CBA is required by ADF ###","systemChat"] call BIS_fnc_MP;
