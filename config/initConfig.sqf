@@ -19,7 +19,7 @@ qipTPL_defaultUniformItems = [
 
 /********** Winteratmosphere **********/
 qipTPL_breathFog = false; // enables breathfog, probably more in the futur
-qipMOD_snowStorm = false; // enables the snowStorm from the qipMod
+qipTPL_snowStorm = false; // enables the snowStorm from the qipMod
 
 /********** UNIT/VEHICLE CACHING **********/
 ADF_Caching_unitDistance = 1000; // AI Unit caching distance default = 1000 meters.

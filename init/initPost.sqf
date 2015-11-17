@@ -16,8 +16,6 @@ _cntStop = -1;
 if (isDedicated || isHC || isCurator) exitWith {};
 
 if (qipTPL_init) then {
-	_hudStatus = shownHUD;
-	showHUD [false,false,false,false,false,false,false,false];
 	if (qipTPL_uavIntro) then {
 		_uavIntro = [
 			vehicle _unit, // Target position (replace MARKERNAME)
@@ -74,18 +72,16 @@ if (qipTPL_init) then {
 
 	hint parseText _postInitMsg;
 	sleep 5;
-	showHUD _hudStatus;
 	_unit enableSimulation true;
 };
-finishMissionInit;
 hintSilent "";
 
-if ( vehicle player == player ) then {
-	if ( primaryWeapon player != "" ) then {
-		player playMove "AmovPercMstpSlowWrflDnon";
+if ( vehicle _unit == _unit ) then {
+	if ( primaryWeapon _unit != "" ) then {
+		_unit playMove "AmovPercMstpSlowWrflDnon";
 	} else {
-		if ( handgunWeapon player != "" ) then {
-			player playMove "AmovPercMstpSrasWpstDnon_AmovPercMstpSrasWlnrDnon";
+		if ( handgunWeapon _unit != "" ) then {
+			_unit playMove "AmovPercMstpSrasWpstDnon_AmovPercMstpSrasWlnrDnon";
 		};
 	};
 };
