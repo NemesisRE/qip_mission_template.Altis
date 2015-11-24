@@ -571,7 +571,7 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_repair_fullRepairLocation {
-		value = 2;
+		value = 3;
 		typeName = "SCALAR";
 		force = 1;
 	};
