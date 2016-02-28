@@ -1,3 +1,11 @@
+class qipTPL
+{
+	title = "qip Template komplett abschalten.";
+	values[] = {0,1};
+	texts[] = {"Aus","An"};
+	default = 1;
+};
+
 class initTPL
 {
 	title = "Initialsierung (Nur zum Bauen abschalten)";
@@ -33,14 +41,6 @@ class Caching
 class Cleanup
 {
 	title = "Aufräumen Script";
-	values[] = {0,1};
-	texts[] = {"Aus","An"};
-	default = 0;
-};
-
-class ServerPerf
-{
-	title = "Debug: Server Performance ins Log";
 	values[] = {0,1};
 	texts[] = {"Aus","An"};
 	default = 0;
