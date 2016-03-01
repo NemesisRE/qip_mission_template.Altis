@@ -6,6 +6,7 @@ onLoadMission = "quies in proelium qip.clans.de";
 onLoadIntroTime = 0;
 onLoadMissionTime = 0;
 loadScreen =  "\qipTPL\Images\qip_flag.paa";
+//loadScreen = "qipTPL\Images\qip_flag.paa";
 onLoadIntro = "Powered by [qip]";
 overviewPicture = "\qipTPL\Images\qip_flag.paa";
 
@@ -79,14 +80,22 @@ class CfgIdentities {
 	#include "qipTPL\config\CfgFiles\CfgIdentities.hpp"
 };
 
-class Params {
-	#include "qipTPL\config\CfgFiles\CfgParams.hpp"
+class CfgRespawnTemplates {
+	#include "qipTPL\config\CfgFiles\CfgRespawnTemplates.hpp"
 };
 
 class CfgFunctions {
+	class qip {
+		class mission {
+			class preInit {
+				file = "qipTPL\config\Functions\fn_preInit.sqf";
+				preInit = 1;
+			};
+			class postInit {
+				file = "qipTPL\config\Functions\fn_postInit.sqf";
+				postInit = 1;
+			};
+		};
+	};
 	#include "qipTPL\config\CfgFiles\CfgFunctions.hpp"
-};
-
-class CfgRespawnTemplates {
-	#include "qipTPL\config\CfgFiles\CfgRespawnTemplates.hpp"
 };
