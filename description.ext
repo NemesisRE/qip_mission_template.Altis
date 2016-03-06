@@ -6,6 +6,7 @@ onLoadMission = "quies in proelium qip.clans.de";
 onLoadIntroTime = 0;
 onLoadMissionTime = 0;
 loadScreen =  "\qipTPL\Images\qip_flag.paa";
+//loadScreen = "qipTPL\Images\qip_flag.paa";
 onLoadIntro = "Powered by [qip]";
 overviewPicture = "\qipTPL\Images\qip_flag.paa";
 
@@ -44,7 +45,7 @@ taskManagement_markers2D = 1; // 0: do not use new 2D markers (default), 1: repl
 taskManagement_markers3D = 1; // 0: do not use new 3D markers (default), 1: replace task waypoints with new 3D markers
 taskManagement_propagate = 1; // 0: do not propagate (default), 1: propagate shared tasks to subordinates
 taskManagement_drawDist = 2500; // 3D marker draw distance (default: 2000)
-disableChannels[] = {0,1,2,3,4,5,6}; // Restrict chat channels where (0=Global),(1=Side),(2=Command),(3=Group),(4=Vehicle),(5=Direct),(6=System).
+disableChannels[] = {2,4,5,6}; // Restrict chat channels where (0=Global),(1=Side),(2=Command),(3=Group),(4=Vehicle),(5=Direct),(6=System).
 
 /***********************************   DO NOT EDIT BELOW THIS LINE!   **********************************/
 enableDebugConsole = 1;	// Enable the debug console where (0=disabled),(1=Admins Only),(2=Everyone) DO NOT SET AS 2!
@@ -78,14 +79,26 @@ class CfgIdentities {
 	#include "qipTPL\config\CfgFiles\CfgIdentities.hpp"
 };
 
+class CfgRespawnTemplates {
+	#include "qipTPL\config\CfgFiles\CfgRespawnTemplates.hpp"
+};
+
 class Params {
 	#include "qipTPL\config\CfgFiles\CfgParams.hpp"
 };
 
 class CfgFunctions {
+	class qip {
+		class mission {
+			class preInit {
+				file = "qipTPL\config\Functions\fn_preInit.sqf";
+				preInit = 1;
+			};
+			class postInit {
+				file = "qipTPL\config\Functions\fn_postInit.sqf";
+				postInit = 1;
+			};
+		};
+	};
 	#include "qipTPL\config\CfgFiles\CfgFunctions.hpp"
-};
-
-class CfgRespawnTemplates {
-	#include "qipTPL\config\CfgFiles\CfgRespawnTemplates.hpp"
 };
