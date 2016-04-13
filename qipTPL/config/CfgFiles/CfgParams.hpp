@@ -1,6 +1,6 @@
 class qipTPL
 {
-	title = "qip Template komplett abschalten.";
+	title = "qip Template nutzen";
 	values[] = {0,1};
 	texts[] = {"Aus","An"};
 	default = 1;
