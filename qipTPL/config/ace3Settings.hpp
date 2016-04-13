@@ -25,7 +25,7 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_finger_maxRange {
-		value = 4;
+		value = 7;
 		typeName = "SCALAR";
 		force = 1;
 	};
@@ -180,7 +180,7 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_medical_increaseTrainingInLocations {
-		value = 0;
+		value = 1;
 		typeName = "BOOL";
 		force = 1;
 	};
@@ -230,7 +230,7 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_medical_playerDamageThreshold {
-		value = 1;
+		value = 1.5;
 		typeName = "SCALAR";
 		force = 1;
 	};
@@ -255,12 +255,12 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_medical_enableRevive {
-		value = 2;
+		value = 1;
 		typeName = "SCALAR";
 		force = 1;
 	};
 	class ace_medical_maxReviveTime {
-		value = 120;
+		value = 600;
 		typeName = "SCALAR";
 		force = 1;
 	};
@@ -695,7 +695,7 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_explosives_PunishNonSpecialists {
-		value = 0;
+		value = 1;
 		typeName = "BOOL";
 		force = 1;
 	};

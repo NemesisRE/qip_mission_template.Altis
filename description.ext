@@ -19,14 +19,14 @@ class Header {
 
 /**********  Respawn & JIP Settings **********/
 respawn = 2; //  0 = No respawn, 1 = Spectator, 2 = Instant, respawn just where you died, 3 = Respawn at base (respawn_west marker), 4 = Respawn in your group, 5 = Respawn into an AI unit on your side
-respawnDelay = 5; // Respawn delay time in seconds (set to 3 for testing, set to 300 (= 5 min) for final).
+respawnDelay = 5; // Respawn delay time in seconds
 respawnDialog = 1; // Respawn dialog in case of multiple locations. 0 = false (no dialog), 1 = true (show dialog).
 respawnButton = 1; // Respawn button in the pause menu is automatically now enabled for INSTANT, BASE, GROUP and SIDE respawn types. 0 = disabled, 1 = enabled
 respawnOnStart = -1; // 1 = Respawn on start. Run respawn script on start, 0 = Dont respawn on start. Run respawn script on start, -1 = Dont respawn on start. Don't run respawn script on start.
 joinUnassigned = 1; // Where 0 forces joining players into the first empty slot, 1 leaves them to select their own slot.
 
 // Respawn Ticket system init. Vars defined in init
-respawnTemplates[] = {"MenuPosition"};
+respawnTemplates[] = {"MenuPosition","MenuInventory"};
 //respawnTemplatesWest[] = {"MenuPosition"};
 //respawnTemplatesEast[] = {"MenuPosition"};
 //respawnTemplatesCiv[] = {"MenuPosition"};
@@ -87,15 +87,19 @@ class Params {
 	#include "qipTPL\config\CfgFiles\CfgParams.hpp"
 };
 
+class CfgLoadouts {
+	#include "qipTPL\config\CfgFiles\CfgLoadouts.hpp"
+};
+
 class CfgFunctions {
 	class qip {
 		class mission {
 			class preInit {
-				file = "qipTPL\config\Functions\fn_preInit.sqf";
+				file = "qipTPL\config\Functions\Core\fn_preInit.sqf";
 				preInit = 1;
 			};
 			class postInit {
-				file = "qipTPL\config\Functions\fn_postInit.sqf";
+				file = "qipTPL\config\Functions\Core\fn_postInit.sqf";
 				postInit = 1;
 			};
 		};
