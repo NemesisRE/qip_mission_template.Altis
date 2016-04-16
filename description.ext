@@ -16,4 +16,4 @@ class Header {
 	maxPlayers = 100;
 };
 
-#include "description.hpp"
+#include "qipTPL\Config\description.hpp"
