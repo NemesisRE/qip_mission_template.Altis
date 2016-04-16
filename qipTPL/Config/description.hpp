@@ -38,15 +38,15 @@ saving = 0; // disable saving
 
 /********** Cfg Includes **********/
 class CfgSounds {
-	#include "..\CfgFiles\CfgSounds.hpp"
+	#include "..\Sounds\CfgSounds.hpp"
 };
 
 class CfgMusic {
-	#include "..\CfgFiles\CfgMusic.hpp"
+	#include "..\Music\CfgMusic.hpp"
 };
 
 class CfgRadio {
-	#include "..\CfgFiles\CfgRadio.hpp"
+	#include "..\Radio\CfgRadio.hpp"
 };
 
 class CfgUnitInsignia {
@@ -69,8 +69,12 @@ class CfgLoadouts {
 	#include "..\CfgFiles\CfgLoadouts.hpp"
 };
 
+class ACE_Settings {
+//	#include "..\CfgFiles\CfgAce3Settings.hpp"
+};
+
 class CfgFunctions {
-	#include "..\CfgFiles\CfgFunctions.hpp"
+	#include "..\Functions\CfgFunctions.hpp"
 	class qip {
 		class mission {
 			class preInit {
