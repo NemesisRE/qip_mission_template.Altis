@@ -9,3 +9,5 @@ qipTPL_clanFlag = "\qipTPL\Images\qip_flag.paa"; // Full path to the clan flag (
 /********** Winteratmosphere **********/
 qipTPL_breathFog = false; // enables breathfog, probably more in the futur
 qipTPL_snowStorm = false; // enables the snowStorm from the qipMod
+qipTPL_snowStormIntensity = 0; // 0 = Random; 1 = Light; 2 = Moderate; 3 = Heavy
+qipTPL_sandStorm = false; // enables the snowStorm from the qipMod
