@@ -7,7 +7,7 @@ respawnOnStart = -1; // 1 = Respawn on start. Run respawn script on start, 0 = D
 joinUnassigned = 1; // Where 0 forces joining players into the first empty slot, 1 leaves them to select their own slot.
 
 // Respawn Ticket system init. Vars defined in init
-respawnTemplates[] = {"MenuPosition","MenuInventory"};
+respawnTemplates[] = {"MenuPosition"};
 //respawnTemplatesWest[] = {"MenuPosition"};
 //respawnTemplatesEast[] = {"MenuPosition"};
 //respawnTemplatesCiv[] = {"MenuPosition"};
