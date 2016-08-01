@@ -25,7 +25,7 @@ class AllUnits {
 	//vest = "";							//| Replaces vest.
 	//items[] = {};							//| Replaces items (Deletes all existing Items).
 	//magazines[] = {};						//| Replaces magazines (Deletes all existing magazines).
-	addItems[] =  {"ACE_EarPlugs"};			//| Adds items.
+	addItems[] =  {"ACE_EarPlugs","murshun_cigs_lighter"};			//| Adds items.
 	//addMagazines[] = {};					//| Adds magazines.
 	//addItemsToUniform[] = {};				//| Adds items/magazines to the uniform.
 	//addItemsToVest[] = {};				//| Adds items/magazines to the vest.
