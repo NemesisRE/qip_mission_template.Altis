@@ -17,7 +17,7 @@ class ace_medical_useLocation_PAK {
 class ace_map_BFT_ShowPlayerNames {
 	title = "$STR_ACE_Map_BFT_ShowPlayerNames_Description";
 	ACE_setting = 1;
-	values[] = {1, 2};
+	values[] = {0, 1};
 	texts[] =  {"$STR_ACE_Common_Disabled", "$STR_ACE_Common_Enabled"};
 	default = 1;
 };
