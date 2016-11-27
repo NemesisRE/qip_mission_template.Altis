@@ -1,3 +1,10 @@
+/********** Some defaults **************/
+overviewPicture = "\qipTPL\Images\qip_flag.paa";
+onLoadMission = "quies in proelium qip.clans.de";
+onLoadIntroTime = 0;
+onLoadMissionTime = 0;
+onLoadIntro = "Powered by [qip]";
+
 /**********  Respawn & JIP Settings **********/
 respawn = 2; //  0 = No respawn, 1 = Spectator, 2 = Instant, respawn just where you died, 3 = Respawn at base (respawn_west marker), 4 = Respawn in your group, 5 = Respawn into an AI unit on your side
 respawnDelay = 5; // Respawn delay time in seconds

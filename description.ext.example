@@ -1,13 +1,7 @@
 author = "[qip] NemesisRE";
 overviewText = "Mission Template for Zeus Missions";
 onLoadName = "[qip] Mission Template";
-onLoadMission = "quies in proelium qip.clans.de";
-onLoadIntroTime = 0;
-onLoadMissionTime = 0;
-loadScreen =  "\qipTPL\Images\qip_flag.paa";
-//loadScreen = "qipTPL\Images\qip_flag.paa";
-onLoadIntro = "Powered by [qip]";
-overviewPicture = "\qipTPL\Images\qip_flag.paa";
+//loadScreen =  "qipTPL\Images\qip_flag.paa";
 
 /**********  Mission type settings **********/
 class Header {
