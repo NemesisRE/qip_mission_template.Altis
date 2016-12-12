@@ -57,11 +57,11 @@ class AllPlayers {
 };
 
 /*******************************************************************************
-Das Loadout kann im Arsenal des qipTPL Showcase mit STRG + SHIFT + C exportiert werden,
-es wird dann hier in eine Klasse (hier: Beispiel) kopiert und kann mit dem Klassennamen
-im Editor als Einheiten Name oder Beschreibung verwendet werden. Desweiteren können auch
-die Einheiten klassen verwendet werden um das Loudout aller Einheiten dieser Klasse zu
-ändern (z.B. B_Medic_F für alle Blufor Medics).
+Das Loadout kann im qipTPL Showcase "qipTPL | Arsenal Export" per Spieleraktion (Mausrad)
+exportiert werden, es wird dann hier in eine Klasse (hier: Beispiel) kopiert und kann mit
+dem Klassennamen im Editor als Einheiten Name oder Beschreibung verwendet werden.
+Desweiteren können auch die Einheiten klassen verwendet werden um das Loudout aller
+Einheiten dieser Klasse zu ändern (z.B. B_Medic_F für alle Blufor Medics).
 *******************************************************************************/
 class Beispiel {
 	magazines[] = {};
