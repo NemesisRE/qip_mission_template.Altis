@@ -23,21 +23,21 @@ class ace_map_BFT_ShowPlayerNames {
 };
 
 class qipTPL {
-	title = "qip Template nutzen";
+	title = "$STR_qipTPL_useTPL";
 	values[] = {0,1};
 	texts[] = {"$STR_qipTPL_Common_Disabled", "$STR_qipTPL_Common_Enabled"};
 	default = 1;
 };
 
 class initTPL {
-	title = "Initialsierung (Nur zum Bauen abschalten)";
+	title = "$STR_qipTPL_initTPL";
 	values[] = {0,1};
 	texts[] = {"$STR_qipTPL_Common_Disabled", "$STR_qipTPL_Common_Enabled"};
 	default = 1;
 };
 
 class uavIntro {
-	title = "UAV Intro Sequenze";
+	title = "$STR_qipTPL_uavIntro";
 	values[] = {0,1};
 	texts[] = {"$STR_qipTPL_Common_Disabled", "$STR_qipTPL_Common_Enabled"};
 	default = 1;

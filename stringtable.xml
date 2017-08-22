@@ -47,5 +47,18 @@
             <Portuguese>Não</Portuguese>
             <Italian>No</Italian>
         </Key>
+        <Key ID="STR_qipTPL_useTPL">
+            <English>Use qip template</English>
+            <German>qip Template nutzen</German>
+        </Key>
+        <Key ID="STR_qipTPL_initTPL">
+            <English>Initialisation (disable only while mission build</English>
+            <German>Initialsierung (Nur zum Bauen abschalten)</German>
+        </Key>
+        <Key ID="STR_qipTPL_uavIntro">
+            <English>Initialisation (disable only while mission build</English>
+            <German>Initialsierung (Nur zum Bauen abschalten)</German>
+        </Key>
+		
     </Package>
 </Project>
