@@ -6,5 +6,4 @@ if (isServer) then {
 [] spawn {
 	sleep 0.2;
 	[] call qipTPL_fnc_preInit;
-	[] call qipTPL_fnc_initZeus;
 };
