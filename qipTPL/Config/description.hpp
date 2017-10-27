@@ -36,7 +36,8 @@ taskManagement_drawDist = 2500; // 3D marker draw distance (default: 2000)
 disableChannels[] = {2,4,5,6}; // Restrict chat channels where (0=Global),(1=Side),(2=Command),(3=Group),(4=Vehicle),(5=Direct),(6=System).
 
 /***********************************   DO NOT EDIT BELOW THIS LINE!   **********************************/
-enableDebugConsole[] = {"76561197977711898"};	// Enable the debug console where (0=disabled),(1=Admins Only),(2=Everyone) DO NOT SET AS 2!
+//enableDebugConsole = 1;	// Enable the debug console where (0=disabled),(1=Admins Only),(2=Everyone) DO NOT SET AS 2!
+enableDebugConsole[] = {"76561197977711898"};	// Enable the debug console for host / logged in admins and all listed user id's
 aiKills = 0; // 0 = Disable, 1 = Enable
 enableItemsDropping = 1; // 0 = Disable, 1 = Enable
 allowFunctionsLog = 0; // 0 = Disable, 1 = Enable
