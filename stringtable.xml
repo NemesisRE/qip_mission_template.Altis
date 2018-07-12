@@ -3,8 +3,8 @@
     <Package name="Common">
         <Key ID="STR_qipTPL_Common_Disabled">
             <English>Disabled</English>
-            <Czech>Zak·z·no</Czech>
-            <French>DÈsactiver</French>
+            <Czech>Zak√°z√°no</Czech>
+            <French>D√©sactiver</French>
             <German>Deaktiviert</German>
             <Italian>Disattivato</Italian>
             <Polish>Wylaczone</Polish>
@@ -44,7 +44,7 @@
             <French>Non</French>
             <Russian>???</Russian>
             <Hungarian>Nem</Hungarian>
-            <Portuguese>N„o</Portuguese>
+            <Portuguese>N√£o</Portuguese>
             <Italian>No</Italian>
         </Key>
         <Key ID="STR_qipTPL_useTPL">
@@ -52,12 +52,12 @@
             <German>qip Template nutzen</German>
         </Key>
         <Key ID="STR_qipTPL_initTPL">
-            <English>Initialisation (disable only while mission build</English>
+            <English>Initialisation (disable only while mission build)</English>
             <German>Initialsierung (Nur zum Bauen abschalten)</German>
         </Key>
         <Key ID="STR_qipTPL_uavIntro">
-            <English>Initialisation (disable only while mission build</English>
-            <German>Initialsierung (Nur zum Bauen abschalten)</German>
+            <English>UAV Intro</English>
+            <German>UAV Intro</German>
         </Key>
 		
     </Package>
