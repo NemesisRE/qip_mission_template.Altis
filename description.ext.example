@@ -5,7 +5,7 @@ onLoadName = "[qip] Mission Template";
 
 /**********  Mission type settings **********/
 class Header {
-	gameType = ZGM;
+	gameType = Zeus;
 	minPlayers = 1;
 	maxPlayers = 100;
 };

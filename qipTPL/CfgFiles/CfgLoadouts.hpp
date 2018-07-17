@@ -53,7 +53,7 @@ class AllAi {
 
 // Alle Spieler Einheiten
 class AllPlayers {
-	addItems[] =  {"ACE_Flashlight_MX991","ACE_CableTie","ACE_CableTie","ACE_IR_Strobe_Item","ACE_MapTools","ItemcTabHCam"};
+	addItems[] =  {"ACE_Flashlight_MX991","ACE_CableTie","ACE_CableTie","ACE_IR_Strobe_Item","ACE_MapTools"};
 };
 
 /*******************************************************************************
