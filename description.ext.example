@@ -1,3 +1,4 @@
+/**********  Mission Information **********/
 author = "[qip] NemesisRE";
 overviewText = "Mission Template for Zeus Missions";
 onLoadName = "[qip] Mission Template";
@@ -10,5 +11,5 @@ class Header {
 	maxPlayers = 100;
 };
 
-// MUST BE IN HERE
+//////////////// DO NOT EDIT BELOW THIS \\\\\\\\\\\\\\\\
 #include "qipTPL\Config\description.hpp"

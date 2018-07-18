@@ -77,10 +77,6 @@ class CfgLoadouts {
 	#include "..\CfgFiles\CfgLoadouts.hpp"
 };
 
-class ACE_Settings {
-//	#include "..\CfgFiles\CfgAce3Settings.hpp"
-};
-
 class CfgFunctions {
 	#include "..\Functions\CfgFunctions.hpp"
 	class qip {
