@@ -1,12 +1,13 @@
 /**********  Mission Information **********/
 author = "[qip] NemesisRE";
-overviewText = "Mission Template for Zeus Missions";
-onLoadName = "[qip] Mission Template";
-//loadScreen =  "qipTPL\Images\qip_flag.paa";
+briefingName = "Escape Game Malden: #4"; // Missionselection Screen
+overviewText = "Mission Template for Zeus Missions"; // Heading on the loadscreen
+onLoadName = "[qip] Mission Template"; // Caption on the loadscreen
+//loadScreen =  "qipTPL\Images\qip_flag.paa"; // Picture on the loadscreen
 
 /**********  Mission type settings **********/
 class Header {
-	gameType = Zeus;
+	gameType = Zeus; // https://community.bistudio.com/wiki/Multiplayer_Game_Types
 	minPlayers = 1;
 	maxPlayers = 100;
 };
