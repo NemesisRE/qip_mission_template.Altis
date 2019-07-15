@@ -79,16 +79,4 @@ class CfgLoadouts {
 
 class CfgFunctions {
 	#include "..\Functions\CfgFunctions.hpp"
-	class qip {
-		class mission {
-			class preInit {
-				file = "qipTPL\Functions\Core\fn_preInit.sqf";
-				preInit = 1;
-			};
-			class postInit {
-				file = "qipTPL\Functions\Core\fn_postInit.sqf";
-				postInit = 1;
-			};
-		};
-	};
 };

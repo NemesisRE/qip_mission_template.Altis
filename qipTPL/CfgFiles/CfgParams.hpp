@@ -11,10 +11,3 @@ class initTPL {
 	texts[] = {"$STR_qipTPL_Common_Disabled", "$STR_qipTPL_Common_Enabled"};
 	default = 1;
 };
-
-class uavIntro {
-	title = "$STR_qipTPL_uavIntro";
-	values[] = {0,1};
-	texts[] = {"$STR_qipTPL_Common_Disabled", "$STR_qipTPL_Common_Enabled"};
-	default = 1;
-};
