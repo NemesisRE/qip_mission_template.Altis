@@ -1,6 +1,5 @@
 /********** Some defaults **************/
 overviewPicture = "\z\qiptpl\addons\assets\Images\qip_flag.paa";
-onLoadMission = "quies in proelium qip.clans.de";
 onLoadIntroTime = 0;
 onLoadMissionTime = 0;
 onLoadIntro = "Powered by [qip]";

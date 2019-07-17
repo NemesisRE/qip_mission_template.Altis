@@ -1,9 +1,17 @@
+////////////////////////////////////////////////////////////////////////////////
+// DO NOT REMOVE THIS
+#include "qipTPL\Config\description.hpp"
+////////////////////////////////////////////////////////////////////////////////
+// EDIT BELOW THIS
+
 /**********  Mission Information **********/
 author = "[qip] NemesisRE";
-briefingName = "Escape Game Malden: #4"; // Missionselection Screen
+briefingName = "Mission Selection Name"; // Missionselection Screen
 overviewText = "Mission Template for Zeus Missions"; // Heading on the loadscreen
 onLoadName = "[qip] Mission Template"; // Caption on the loadscreen
-//loadScreen =  "qipTPL\Images\qip_flag.paa"; // Picture on the loadscreen
+onLoadMission = "quies in proelium";
+loadScreen =  "\z\qipTPL\addons\assets\Images\qip_flag.paa"; // Picture on the loadscreen
+// loadScreen = MISSION_ROOT + "qipTPL\Images\loadScrenPicture.png"
 
 /**********  Mission type settings **********/
 class Header {
@@ -11,6 +19,3 @@ class Header {
 	minPlayers = 1;
 	maxPlayers = 100;
 };
-
-//////////////// DO NOT EDIT BELOW THIS \\\\\\\\\\\\\\\\
-#include "qipTPL\Config\description.hpp"
