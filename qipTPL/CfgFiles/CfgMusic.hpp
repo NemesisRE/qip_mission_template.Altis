@@ -8,6 +8,6 @@ tracks[]={};
 /*
 class MarsIntro {
 	name = "mars_intro";
-	sound[] = {"qip\Music\filename.ogg", db+0, 1.0};
+	sound[] = {"qipTPL\Music\filename.ogg", db+0, 1.0};
 };
 */

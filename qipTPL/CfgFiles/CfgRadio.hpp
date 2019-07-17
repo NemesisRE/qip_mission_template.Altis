@@ -8,7 +8,7 @@ sounds[] = {};
 /*
 class RadioMsg {
  	name = "Radio_Message";
- 	sound[] = {"qip\Radio\filename.ogg", db-100, 1.0}; // .wss implied
+ 	sound[] = {"qipTPL\Radio\filename.ogg", db-100, 1.0}; // .wss implied
  	title = {};
 };
 */

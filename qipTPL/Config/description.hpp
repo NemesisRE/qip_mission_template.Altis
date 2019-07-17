@@ -46,15 +46,15 @@ saving = 0; // disable saving
 
 /********** Cfg Includes **********/
 class CfgSounds {
-	#include "..\Sounds\CfgSounds.hpp"
+	#include "..\CfgFiles\CfgSounds.hpp"
 };
 
 class CfgMusic {
-	#include "..\Music\CfgMusic.hpp"
+	#include "..\CfgFiles\CfgMusic.hpp"
 };
 
 class CfgRadio {
-	#include "..\Radio\CfgRadio.hpp"
+	#include "..\CfgFiles\CfgRadio.hpp"
 };
 
 class CfgUnitInsignia {
@@ -78,5 +78,5 @@ class CfgLoadouts {
 };
 
 class CfgFunctions {
-	#include "..\Functions\CfgFunctions.hpp"
+	#include "..\CfgFiles\CfgFunctions.hpp"
 };
