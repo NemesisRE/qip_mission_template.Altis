@@ -44,6 +44,9 @@ allowFunctionsLog = 0; // 0 = Disable, 1 = Enable
 allowFunctionsRecompile = 1; // 0 = Disable, 1 = Enable
 saving = 0; // disable saving
 
+// make mission root available in MISSION_ROOT variable
+__EXEC (MISSION_ROOT = __FILE__ select [0, count __FILE__ - 15])
+
 /********** Cfg Includes **********/
 class CfgSounds {
 	#include "..\CfgFiles\CfgSounds.hpp"
