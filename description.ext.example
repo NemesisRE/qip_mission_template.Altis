@@ -11,7 +11,7 @@ overviewText = "Mission Template for Zeus Missions"; // Heading on the loadscree
 onLoadName = "[qip] Mission Template"; // Caption on the loadscreen
 onLoadMission = "quies in proelium";
 loadScreen =  "\z\qipTPL\addons\assets\Images\qip_flag.paa"; // Picture on the loadscreen
-// loadScreen = MISSION_ROOT + "qipTPL\Images\loadScrenPicture.png"
+// loadScreen = "qipTPL\Images\loadScrenPicture.png"
 
 /**********  Mission type settings **********/
 class Header {
