@@ -8,6 +8,6 @@ optionale adjustments.
 * edit `briefing.sqf`
 * add your loadouts to `qipTPL\CfgFiles\CfgLoadouts.hpp`
 
-For all features you need to have our mod [qipTPL](https://github.com/NemesisRE/qipTPL) installed
+For all features you need to have our mod [qipTPL](https://github.com/quies-in-proelium/qipTPL) installed
 
-Source: https://github.com/NemesisRE/qip_mission_template.Altis
+Source: https://github.com/quies-in-proelium/qipMissionTPL
