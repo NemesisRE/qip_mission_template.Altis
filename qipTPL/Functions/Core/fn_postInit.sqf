@@ -1,2 +1,2 @@
 // Load briefing
-call compile preprocessFileLineNumbers "qipTPL\config\briefing.sqf";
+call compile preprocessFileLineNumbers "briefing.sqf";

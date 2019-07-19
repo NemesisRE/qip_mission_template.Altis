@@ -1,11 +1,13 @@
 ## [qip] Missiontemplate
 
-Startbereit in drei simplen Schritten:
-
-* kopiere in deine Mission
-* mach eine kopie der `description.ext.example` mit dem namen `description.ext`
+Startbereit in zwei simplen Schritten:
+* füge deine `mission.sqm` hinzu
 * bearbeite die `description.ext`
 
-Du musst unseren mod [qipTPL](https://github.com/NemesisRE/qipTPL) installiert haben
+optionale Anpassungen.
+* bearbeite `briefing.sqf`
+* füge deine Loadouts in `qipTPL\CfgFiles\CfgLoadouts.hpp` ein
+
+Für alle Features musst du unseren mod [qipTPL](https://github.com/NemesisRE/qipTPL) installiert haben
 
 Quelle: https://github.com/NemesisRE/qip_mission_template.Altis
