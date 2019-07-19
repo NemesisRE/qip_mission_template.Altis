@@ -1,6 +1,6 @@
 ## [qip] Missiontemplate
 
-Ready to go in three two steps:
+Ready to go in two steps:
 * add your `mission.sqm`
 * edit `description.ext`
 
