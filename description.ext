@@ -1,0 +1,21 @@
+////////////////////////////////////////////////////////////////////////////////
+// DO NOT REMOVE THIS
+#include "qipTPL\description.hpp"
+////////////////////////////////////////////////////////////////////////////////
+// EDIT BELOW THIS
+
+/**********  Mission Information **********/
+author = "";
+briefingName = ""; // Missionselection Screen
+overviewText = ""; // Heading on the loadscreen
+onLoadName = ""; // Caption on the loadscreen
+onLoadMission = "";
+loadScreen =  "\z\qipTPL\addons\assets\Images\qip_flag.paa"; // Picture on the loadscreen
+// loadScreen = "qipTPL\Images\loadScrenPicture.png"
+
+/**********  Mission type settings **********/
+class Header {
+	gameType = Zeus; // https://community.bistudio.com/wiki/Multiplayer_Game_Types
+	minPlayers = 1;
+	maxPlayers = 100;
+};
