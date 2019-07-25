@@ -45,37 +45,37 @@ saving = 0; // disable saving
 
 /********** Cfg Includes **********/
 class CfgSounds {
-	#include "..\CfgFiles\CfgSounds.hpp"
+	#include "CfgFiles\CfgSounds.hpp"
 };
 
 class CfgMusic {
-	#include "..\CfgFiles\CfgMusic.hpp"
+	#include "CfgFiles\CfgMusic.hpp"
 };
 
 class CfgRadio {
-	#include "..\CfgFiles\CfgRadio.hpp"
+	#include "CfgFiles\CfgRadio.hpp"
 };
 
 class CfgUnitInsignia {
-	#include "..\CfgFiles\CfgUnitInsignia.hpp"
+	#include "CfgFiles\CfgUnitInsignia.hpp"
 };
 
 class CfgIdentities {
-	#include "..\CfgFiles\CfgIdentities.hpp"
+	#include "CfgFiles\CfgIdentities.hpp"
 };
 
 class CfgRespawnTemplates {
-	#include "..\CfgFiles\CfgRespawnTemplates.hpp"
+	#include "CfgFiles\CfgRespawnTemplates.hpp"
 };
 
 class Params {
-	#include "..\CfgFiles\CfgParams.hpp"
+	#include "CfgFiles\CfgParams.hpp"
 };
 
 class CfgLoadouts {
-	#include "..\CfgFiles\CfgLoadouts.hpp"
+	#include "CfgFiles\CfgLoadouts.hpp"
 };
 
 class CfgFunctions {
-	#include "..\CfgFiles\CfgFunctions.hpp"
+	#include "CfgFiles\CfgFunctions.hpp"
 };
