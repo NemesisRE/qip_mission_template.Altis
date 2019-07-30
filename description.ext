@@ -11,7 +11,7 @@ overviewText = ""; // Heading on the loadscreen
 onLoadName = ""; // Caption on the loadscreen
 onLoadMission = "";
 loadScreen =  "\z\qipTPL\addons\assets\Images\qip_flag.paa"; // Picture on the loadscreen
-// loadScreen = "qipTPL\Images\loadScrenPicture.png"
+// loadScreen = "qipTPL\Images\loadScrenPicture.png";
 
 /**********  Mission type settings **********/
 class Header {
