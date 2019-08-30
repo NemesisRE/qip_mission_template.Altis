@@ -1,9 +1,7 @@
-/*
-Identitäten die hier definiert sind kann man für NPC's in der init Zeile der Einheit benutzten.
-Anhand des Beispiels "Hunter_Coleman" würde der aufruf dann wie folgt aussehen:
-
-this setIdentity "Hunter_Coleman";
-*/
+/*******************************************************************************
+Identities defined here can be used in the init line of a unite. "Hunter_Coleman"
+for example would be used like this 'this setIdentity "Hunter_Coleman";'
+*******************************************************************************/
 
 //class Hunter_Coleman {
 //	name="Hunter Tipton XII Coleman";

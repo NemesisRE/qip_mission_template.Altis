@@ -1,8 +1,6 @@
 /*******************************************************************************
-Funknachrichten die hier definiert werden kann man mit dem Klassennamen starten
-Anhand des Beispiels "RadioMsg" würde der aufruf dann wie folgt aussehen:
-
-unit sideRadio "RadioMsg";
+Radio messages definded here can be used with their class name. "RadoMsg" for
+example would be used like this 'unit sideRadio "RadioMsg";'
 *******************************************************************************/
 sounds[] = {};
 /*

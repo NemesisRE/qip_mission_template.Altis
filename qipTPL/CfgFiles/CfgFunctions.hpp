@@ -6,7 +6,6 @@
 class qipTPL_mission {
     class Core {
         file = "qipTPL\Functions\Core";
-        // qipTPL_mission_fnc_postInit
         class postInit {
         	postInit = 1;
         };

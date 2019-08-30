@@ -1,9 +1,11 @@
-//Define custom unit insignia (shoulder patches).
+/*******************************************************************************
+Insignias defined here can be used in the init line of a unite. "Hunter_Coleman"
+for example would be used like this '[this,"qip"] call BIS_fnc_setUnitInsignia;'
+*******************************************************************************/
 
-// class 111thID
-// {
-// 	displayName = "111th Infantry Division"; // Name displayed in Arsenal
-// 	author = "Bohemia Interactive"; // Author displayed in Arsenal
-// 	texture = "\a3\UI_F_Bootcamp\Data\CfgUnitInsignia\B_111thID_texture_ca.paa"; // Image path
+// class qip {
+// 	displayName = "qip"; // Name displayed in Arsenal
+// 	author = "qip"; // Author displayed in Arsenal
+// 	texture = "qipTPL\Images\qip.paa"; // Image path
 // 	textureVehicle = ""; // Does nothing currently, reserved for future use
 // };

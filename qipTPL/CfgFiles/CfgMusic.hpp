@@ -1,8 +1,6 @@
 /*******************************************************************************
-Music die hier definiert wird kann mit dem Klassen namen gestartet werden
-Anhand des Beispiels "MarsIntro" würde der aufruf dann wie folgt aussehen:
-
-playMusic "MarsIntro";
+Music defined here can be used with their class name. "MarsIntro" for example
+would be played like this 'playMusic "MarsIntro";'
 *******************************************************************************/
 tracks[]={};
 /*

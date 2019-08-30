@@ -1,8 +1,6 @@
 /*******************************************************************************
-Sounds die hier definiert wird kann mit dem Klassen namen gestartet werden
-Anhand des Beispiels "wolf1" würde der aufruf dann wie folgt aussehen:
-
-playSound "wolf1";
+Sounds defined here can be used with their class name. "wolf1" for example
+would be played like this 'playSound "wolf1";'
 *******************************************************************************/
 sounds[] = {};
 /*
