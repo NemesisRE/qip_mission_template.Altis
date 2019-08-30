@@ -3,6 +3,7 @@ overviewPicture = "\z\qiptpl\addons\assets\Images\qip_flag.paa";
 onLoadIntroTime = 0;
 onLoadMissionTime = 0;
 onLoadIntro = "Powered by [qip]";
+cba_settings_hasSettingsFile = 1;
 
 /**********  Respawn & JIP Settings **********/
 respawn = 2; //  0 = No respawn, 1 = Spectator, 2 = Instant, respawn just where you died, 3 = Respawn at base (respawn_west marker), 4 = Respawn in your group, 5 = Respawn into an AI unit on your side
