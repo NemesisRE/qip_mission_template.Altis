@@ -4,6 +4,10 @@ onLoadIntroTime = 0;
 onLoadMissionTime = 0;
 onLoadIntro = "Powered by [qip]";
 cba_settings_hasSettingsFile = 1;
+//enableDebugConsole = 1;	// Enable the debug console where (0=disabled),(1=Admins Only),(2=Everyone) BETTER DO NOT SET AS 2!
+enableDebugConsole[] = {"76561197977711898"};	// Enable the debug console for host / logged in admins and all listed user id's
+aiKills = 0; // 0 = Disable, 1 = Enable
+enableItemsDropping = 1; // 0 = Disable, 1 = Enable
 
 /**********  Respawn & JIP Settings **********/
 respawn = 2; //  0 = No respawn, 1 = Spectator, 2 = Instant, respawn just where you died, 3 = Respawn at base (respawn_west marker), 4 = Respawn in your group, 5 = Respawn into an AI unit on your side
@@ -35,11 +39,12 @@ taskManagement_propagate = 1; // 0: do not propagate (default), 1: propagate sha
 taskManagement_drawDist = 2500; // 3D marker draw distance (default: 2000)
 disableChannels[] = {2,4,5,6}; // Restrict chat channels where (0=Global),(1=Side),(2=Command),(3=Group),(4=Vehicle),(5=Direct),(6=System).
 
-/***********************************   DO NOT EDIT BELOW THIS LINE!   **********************************/
-//enableDebugConsole = 1;	// Enable the debug console where (0=disabled),(1=Admins Only),(2=Everyone) DO NOT SET AS 2!
-enableDebugConsole[] = {"76561197977711898"};	// Enable the debug console for host / logged in admins and all listed user id's
-aiKills = 0; // 0 = Disable, 1 = Enable
-enableItemsDropping = 1; // 0 = Disable, 1 = Enable
+/**********  Mission type settings **********/
+class Header {
+	gameType = Zeus; // https://community.bistudio.com/wiki/Multiplayer_Game_Types
+};
+
+/*************   DO NOT EDIT BELOW THIS LINE! EXCEPT YOU KNOW WHAT YOU ARE DOING   *************/
 allowFunctionsLog = 0; // 0 = Disable, 1 = Enable
 allowFunctionsRecompile = 1; // 0 = Disable, 1 = Enable
 saving = 0; // disable saving
