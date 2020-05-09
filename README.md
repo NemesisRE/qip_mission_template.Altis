@@ -38,9 +38,10 @@ optionale adjustments.
   * `qipTPL\description.hpp`
   * `cba_settings.sqf`
 * edit `briefing.sqf`
-* add your loadouts to `qipTPL\CfgFiles\CfgLoadouts.hpp` (requires a3g-loadout from  <a href="https://github.com/quies-in-proelium/qiptpl">qiptpl</a>)
+* add your loadouts to `qipTPL\CfgFiles\CfgLoadouts.hpp` (requires loadout addon from  <a href="https://github.com/quies-in-proelium/qiptpl">qiptpl</a>)
 
 ## Dependencies
 - <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3 (optional)</a>
+- <a href="https://github.com/quies-in-proelium/qiptpl">qipTPL (optional)</a>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />qipMissionTPL is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
