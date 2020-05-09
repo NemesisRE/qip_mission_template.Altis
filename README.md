@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="https://github.com/quies-in-proelium/qipMissionTPL/releases/latest">
-        <img src="https://img.shields.io/badge/Version-1.0.2-blue.svg?style=flat-square" alt="TPL Version">
+        <img src="https://img.shields.io/badge/Version-1.1.1-blue.svg?style=flat-square" alt="TPL Version">
     </a>
     <a href="https://github.com/quies-in-proelium/qipMissionTPL/issues">
         <img src="https://img.shields.io/github/issues-raw/quies-in-proelium/qipBFT.svg?style=flat-square&label=Issues" alt="TPL Issues">
