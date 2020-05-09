@@ -3,9 +3,11 @@ overviewPicture = "\z\qiptpl\addons\assets\Images\qip_flag.paa";
 onLoadIntroTime = 0;
 onLoadMissionTime = 0;
 onLoadIntro = "Powered by [qip]";
+briefing = 1; // 0 = disabled - 1 = enabled
+debriefing = 1; // 0 = disabled - 1 = enabled
 cba_settings_hasSettingsFile = 1;
-//enableDebugConsole = 1;	// Enable the debug console where (0=disabled),(1=Admins Only),(2=Everyone) BETTER DO NOT SET AS 2!
-enableDebugConsole[] = {"76561197977711898"};	// Enable the debug console for host / logged in admins and all listed user id's
+//enableDebugConsole = 1; // Enable the debug console where (0=disabled),(1=Admins Only),(2=Everyone) BETTER DO NOT SET AS 2!
+enableDebugConsole[] = {"76561197977711898"}; // Enable the debug console for host / logged in admins and all listed user id's
 aiKills = 0; // 0 = Disable, 1 = Enable
 enableItemsDropping = 1; // 0 = Disable, 1 = Enable
 
