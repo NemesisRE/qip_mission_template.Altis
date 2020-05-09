@@ -27,7 +27,6 @@ respawnTemplates[] = {"MenuPosition"};
 respawnTemplatesVirtual[] = {"Base"};
 
 /********** Vanilla Revive Settings **********/
-// Vanilla Revive Settings
 //reviveDelay = 20;
 //reviveForceRespawnDelay = 60;
 //reviveBleedOutDelay = 180;
