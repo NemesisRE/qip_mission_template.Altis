@@ -2,16 +2,16 @@
 
 <p align="center">
     <a href="https://github.com/quies-in-proelium/qipMissionTPL/releases/latest">
-        <img src="https://img.shields.io/badge/Version-1.1.1-blue.svg?style=flat-square" alt="TPL Version">
+        <img src="https://img.shields.io/github/v/release/quies-in-proelium/qipMissionTPL" alt="TPL Version">
     </a>
     <a href="https://github.com/quies-in-proelium/qipMissionTPL/issues">
-        <img src="https://img.shields.io/github/issues-raw/quies-in-proelium/qipBFT.svg?style=flat-square&label=Issues" alt="TPL Issues">
+        <img src="https://img.shields.io/github/issues-raw/quies-in-proelium/qipMissionTPL" alt="TPL Issues">
     </a>
     <a href="https://github.com/quies-in-proelium/qipMissionTPL/releases">
-        <img src="https://img.shields.io/github/downloads/quies-in-proelium/qipBFT/total.svg?style=flat-square&label=Downloads" alt="TPL Downloads">
+        <img src="https://img.shields.io/github/downloads/quies-in-proelium/qipMissionTPL/total" alt="TPL Downloads">
     </a>
     <a href="https://github.com/quies-in-proelium/qipMissionTPL/blob/master/LICENSE">
-        <img src="https://img.shields.io/badge/License-CC%20BY--NC--SA-orange?style=flat-square" alt="TPL License">
+        <img src="https://img.shields.io/badge/License-CC%20BY--NC--SA-orange" alt="TPL License">
     </a>
 </p>
 
