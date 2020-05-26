@@ -41,10 +41,10 @@ respawnTemplatesVirtual[] = {"Base"};
 /********** Vanilla Garbagecollector Settings **********/
 //minPlayerDistance = 50; // meters. Default: 0
 
-//corpseManagerMode = 0; // Default: 0 for SP, 2 for MP
-//corpseLimit = 1; // Default: 15
-//corpseRemovalMinTime = 1; // seconds. Default: 10
-//corpseRemovalMaxTime = 1200; // seconds. Default: 3600
+corpseManagerMode = 2; // Default: 0 for SP, 2 for MP
+corpseLimit = 1; // Default: 15
+corpseRemovalMinTime = 1; // seconds. Default: 10
+corpseRemovalMaxTime = 10; // seconds. Default: 3600
 
 //wreckManagerMode = 0; // Default: 0 for SP, 2 for MP
 //wreckLimit = 1; // seconds. Default: 15
